@@ -5,7 +5,7 @@ featured_image: '/images/qualities.jpg'
 omit_header_text: true
 ---
 
-## Cualidades de un CISO
+## Cualidades de un Director de Seguridad de la Información (CISO)
 
 Desde mi perspectiva, un Director de Seguridad de la Información (CISO) debe exhibir una combinación única de cualidades cruciales para navegar en el complejo ámbito de la ciberseguridad. Estos atributos son fundamentales para el liderazgo efectivo y la gestión de operaciones de seguridad:
 
