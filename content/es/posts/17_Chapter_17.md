@@ -1,13 +1,13 @@
 ---
-title: "Cualidades de un CISO Exitoso"
+title: "Cualidades de un CISO"
 date: 2024-02-07
 featured_image: '/images/qualities.jpg'
 omit_header_text: true
 ---
 
-## Cualidades de un CISO Exitoso
+## Cualidades de un CISO
 
-Desde mi perspectiva, un Director de Seguridad de la Información (CISO) exitoso exhibe una combinación única de cualidades cruciales para navegar en el complejo ámbito de la ciberseguridad. Estos atributos son fundamentales para el liderazgo efectivo y la gestión de operaciones de seguridad:
+Desde mi perspectiva, un Director de Seguridad de la Información (CISO) debe exhibir una combinación única de cualidades cruciales para navegar en el complejo ámbito de la ciberseguridad. Estos atributos son fundamentales para el liderazgo efectivo y la gestión de operaciones de seguridad:
 
 - **Pensamiento Estratégico**: Imprescindible para visualizar el panorama general de seguridad y formular objetivos a largo plazo, además de desarrollar estrategias accionables para alcanzarlos.
 

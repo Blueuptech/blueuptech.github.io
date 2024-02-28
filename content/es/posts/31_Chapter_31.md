@@ -7,7 +7,7 @@ omit_header_text: true
 
 ## Enfoque para el Modelado de Amenazas
 
-Mi metodología en el modelado de amenazas emplea el marco STRIDE, un modelo exhaustivo para la identificación proactiva de amenazas y vulnerabilidades. STRIDE guía la evaluación de posibles amenazas de seguridad, identificando vulnerabilidades y priorizando los esfuerzos de remediación de manera efectiva. Implementar STRIDE reduce significativamente la probabilidad de ataques cibernéticos exitosos, mejorando así la seguridad de sistemas y aplicaciones.
+Es habitual que wn el modelado de amenazas empleemos el marco STRIDE, un modelo exhaustivo para la identificación proactiva de amenazas y vulnerabilidades. STRIDE guía la evaluación de posibles amenazas de seguridad, identificando vulnerabilidades y priorizando los esfuerzos de remediación de manera efectiva. Implementar STRIDE reduce significativamente la probabilidad de éxito en ataques, mejorando así la seguridad de sistemas y aplicaciones.
 
 ### Pasos en Mi Proceso de Modelado de Amenazas
 

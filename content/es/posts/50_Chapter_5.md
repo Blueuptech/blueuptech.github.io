@@ -32,7 +32,7 @@ Mi trayectoria en el liderazgo industrial se ha caracterizado por la previsión 
 ### Logros e Impactos
 
 - **Impacto en el Mercado**: A través de iniciativas estratégicas, he logrado un impacto significativo en el mercado, logrando crecimiento en participación de mercado, ingresos y posicionamiento competitivo.
-- **Innovación y Crecimiento**: He liderado iniciativas exitosas de innovación y expansión, lanzando nuevos productos, entrando en nuevos mercados y impulsando el progreso tecnológico que ha establecido nuevos puntos de referencia en la industria.
+- **Innovación y Crecimiento**: He liderado iniciativas de éxito de innovación y expansión, lanzando nuevos productos, entrando en nuevos mercados y impulsando el progreso tecnológico que ha establecido nuevos puntos de referencia en la industria.
 
 Mi liderazgo en la industria combina acumen estratégico, un impulso por la innovación y un compromiso con la excelencia y colaboración, avanzando no solo objetivos organizacionales sino también contribuyendo al impulso hacia adelante de la industria.
 
