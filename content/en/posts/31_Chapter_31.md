@@ -9,7 +9,7 @@ omit_header_text: true
 
 My methodology in threat modeling employs the STRIDE framework, an exhaustive model for proactive threat and vulnerability identification. STRIDE guides the evaluation of potential security threats, pinpointing vulnerabilities, and prioritizing remediation efforts effectively. Implementing STRIDE significantly reduces the likelihood of successful cyber attacks, thereby enhancing system and application security.
 
-### Steps in My Threat Modeling Process:
+### Steps in My Threat Modeling Process
 
 - **Asset Identification**: Initially, I identify critical assets and assess their value to the organization, establishing the foundation for all subsequent threat modeling activities.
 - **Threat and Vulnerability Identification**: Utilizing the STRIDE framework, I systematically identify potential threats and vulnerabilities that could impact the assets, ensuring comprehensive risk coverage.
@@ -24,7 +24,7 @@ This structured approach to threat modeling underscores my dedication to proacti
 
 Translating findings from threat modeling into actionable and impactful measures is crucial for strengthening our security posture. This involves a detailed process of prioritizing vulnerabilities based on their severity, enhancing security controls, and integrating these insights into our security awareness initiatives. Proactive management of these findings significantly mitigates risks and enhances our defensive measures.
 
-### Process for Actioning Threat Model Findings:
+### Process for Actioning Threat Model Findings
 
 - **Attack Vector Identification**: I begin by identifying potential attack vectors, understanding the methods by which threats could manifest.
 - **Attack Surface Characterization**: The attack surfaces are characterized, detailing vulnerable points in our systems and networks, to focus defensive efforts more effectively.

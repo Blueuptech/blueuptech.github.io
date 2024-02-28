@@ -1,21 +1,36 @@
 ---
-title: "High School Performance"
+title: "Enfoque para el Modelado de Amenazas"
 date: 2024-02-07
-featured_image: '/images/portada.jpg'
+featured_image: '/images/stride.jpg'
 omit_header_text: true
-
-
 ---
 
-## High School Performance
+## Enfoque para el Modelado de Amenazas
 
-Reflecting on my high school years, my academic journey in mathematics, physical sciences, and computing was both rewarding and enlightening, laying the foundation for my future interests and career path. Here’s a breakdown of my performance and interests in these subjects:
+Mi metodología en el modelado de amenazas emplea el marco STRIDE, un modelo exhaustivo para la identificación proactiva de amenazas y vulnerabilidades. STRIDE guía la evaluación de posibles amenazas de seguridad, identificando vulnerabilidades y priorizando los esfuerzos de remediación de manera efectiva. Implementar STRIDE reduce significativamente la probabilidad de ataques cibernéticos exitosos, mejorando así la seguridad de sistemas y aplicaciones.
 
-- **Mathematics**: Mathematics was always a strength for me, thanks to my analytical mindset and problem-solving skills. I enjoyed the logical structure and the satisfaction of solving complex problems. Competitively, I ranked in the upper percentile of my class.
+### Pasos en Mi Proceso de Modelado de Amenazas
 
-- **Physical Sciences**: My performance in physical sciences, including physics and chemistry, was strong. I was fascinated by the practical applications of theoretical concepts, which made these subjects enjoyable. In terms of competition, I was among the top performers, especially in physics, which aligned closely with my interests in understanding the fundamental laws of nature.
+- **Identificación de Activos**: Inicialmente, identifico activos críticos y evalúo su valor para la organización, estableciendo la base para todas las actividades de modelado de amenazas subsiguientes.
+- **Identificación de Amenazas y Vulnerabilidades**: Utilizando el marco STRIDE, identifico sistemáticamente posibles amenazas y vulnerabilidades que podrían impactar los activos, asegurando una cobertura de riesgo comprensiva.
+- **Evaluación de Riesgos**: Evalúo la probabilidad y el impacto potencial de cada amenaza identificada sobre la organización, priorizando basado en la gravedad de los riesgos para enfocar los esfuerzos de remediación donde más se necesiten.
+- **Desarrollo de Estrategias de Mitigación**: Tras la priorización de riesgos, diseño estrategias de mitigación específicas para cada amenaza identificada para asegurar una reducción de riesgo dirigida y eficiente.
+- **Implementación de Estrategias de Mitigación**: Las estrategias formuladas se implementan para reforzar las defensas contra las amenazas identificadas, mejorando la postura de seguridad de la organización.
+- **Monitoreo Continuo**: Reconociendo el panorama de amenazas en constante evolución, abogo por un monitoreo continuo y actualizaciones regulares al modelo de amenazas para abordar nuevas y emergentes amenazas de manera oportuna.
 
-- **Computing**: Computing was not only a strength but also the most enjoyable subject for me. The process of coding, problem-solving, and seeing my ideas come to life through programs was immensely satisfying. My competitive ranking in computing was high, as I often excelled in projects and coding competitions. This subject captivated my interest the most, steering my academic and career interests towards technology and software development.
+Este enfoque estructurado para el modelado de amenazas subraya mi dedicación a la gestión de seguridad proactiva, asegurando una identificación, evaluación y mitigación exhaustivas de posibles amenazas.
 
-In summary, while I found strengths and enjoyment in all three areas, Maths and computing stood out as the subject that not only piqued my interest the most but also shaped my future direction. The blend of analytical challenges in mathematics, the exploratory nature of physical sciences, and the creative and logical processes in computing provided a well-rounded educational experience that has been instrumental in my development.
+## Traduciendo los Hallazgos del Modelado de Amenazas en Acción
 
+Traducir los hallazgos del modelado de amenazas en medidas accionables e impactantes es crucial para fortalecer nuestra postura de seguridad. Esto implica un proceso detallado de priorizar vulnerabilidades basado en su gravedad, mejorar los controles de seguridad e integrar estos conocimientos en nuestras iniciativas de concienciación de seguridad. La gestión proactiva de estos hallazgos mitiga significativamente los riesgos y mejora nuestras medidas defensivas.
+
+### Proceso para Accionar los Hallazgos del Modelado de Amenazas
+
+- **Identificación de Vectores de Ataque**: Comienzo identificando potenciales vectores de ataque, comprendiendo los métodos por los cuales las amenazas podrían manifestarse.
+- **Caracterización de la Superficie de Ataque**: Las superficies de ataque se caracterizan, detallando puntos vulnerables en nuestros sistemas y redes, para enfocar los esfuerzos defensivos de manera más efectiva.
+- **Modelado del Valor de los Activos**: Evaluar y modelar el valor de los activos organizacionales es crítico para entender el impacto potencial de las brechas de seguridad y priorizar la protección de activos de alto valor.
+- **Modelado de las Capacidades del Adversario**: Medir las capacidades de potenciales adversarios ayuda a evaluar el nivel de amenaza que representan, considerando sus herramientas, técnicas y recursos disponibles.
+- **Modelado de los Objetivos del Adversario**: Entendiendo los objetivos de los adversarios, podemos anticipar mejor los tipos de ataques que pueden intentar, ayudando en la preparación de defensas más dirigidas.
+- **Identificación de Requisitos de Seguridad**: El paso final implica identificar requisitos de seguridad específicos necesarios para contrarrestar las amenazas y vulnerabilidades identificadas, alineando las medidas de seguridad de la organización con el panorama actual de amenazas.
+
+Convertir activamente los hallazgos del modelado de amenazas en mejoras concretas de seguridad es un aspecto clave de una estrategia de seguridad efectiva, asegurando que las defensas evolucionen en conjunto con el entorno de amenazas cambiante.

@@ -9,7 +9,7 @@ omit_header_text: true
 
 My engagement with security frameworks, notably the NIST Cybersecurity Framework, has been pivotal in developing comprehensive security practices within the organizations I've served. The NIST Framework is renowned for its versatility and emphasis on continuous improvement, offering a structured yet adaptable method for addressing cybersecurity risks, which aids in effective threat prioritization and vulnerability management.
 
-### Key Aspects of My Experience:
+### Key Aspects of My Experience
 
 - **Comprehensive Understanding of Security Frameworks**: I possess an in-depth knowledge of various security frameworks, with a focus on the NIST Cybersecurity Framework. This encompasses familiarity with its core functions: Identify, Protect, Detect, Respond, and Recover.
 
@@ -27,7 +27,7 @@ Applying the NIST Cybersecurity Framework has markedly strengthened our security
 
 We employ a risk-based strategy for prioritizing security risks, focusing on evaluating asset criticality and vulnerabilities to concentrate efforts on the most pressing risks. This approach ensures that security projects aligned with crucial assets are prioritized, keeping pace with the evolving threat environment to maximize security effectiveness.
 
-### Our Prioritization Strategy Steps:
+### Our Prioritization Strategy Steps
 
 - **Assessing Security Control Criticality**: The initial step involves appraising the importance of various security controls, understanding their contribution to safeguarding key organizational assets and data.
 
