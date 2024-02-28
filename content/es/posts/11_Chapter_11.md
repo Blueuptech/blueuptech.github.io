@@ -1,28 +1,29 @@
 ---
-title: "Successful Response to a Major Security Incident"
+title: "Respuesta exitosa ante un incidente de seguridad importante"
 date: 2024-02-07
 omit_header_text: true
 featured_image: '/images/agency.jpg'
 ---
 
-## CISO Experience
+## Experiencia como CISO
 
-Amidst the conflict in Ukraine, my role as CISO necessitated the management of frequent DoS attacks and the monitoring of communication channels often used by these groups to broadcast their intentions.
+En medio del conflicto en Ucrania, mi papel como CISO requirió gestionar frecuentes ataques de denegación de servicio (DoS) y monitorear canales de comunicación a menudo utilizados por estos grupos para difundir sus intenciones.
 
-I spearheaded the development of an all-encompassing defense strategy, integrating threat intelligence and advancing network segmentation. Through the application of deception techniques and proactive threat hunting, we effectively neutralized the attackers, thereby strengthening our cybersecurity resilience.
+Dirigí el desarrollo de una estrategia de defensa integral, integrando inteligencia de amenazas y avanzando en la segmentación de la red. Mediante la aplicación de técnicas de engaño y la búsqueda proactiva de amenazas, neutralizamos eficazmente a los atacantes, fortaleciendo así nuestra resiliencia en ciberseguridad.
 
-A significant incident involved collaboration between an external company and a banking group entity, under my leadership as Global CISO, leading to the compromise of a user's access permissions. The Play ransomware group exploited this access to exfiltrate information for extortion purposes after launching an attack.
+Un incidente significativo involucró la colaboración entre una empresa externa y una entidad del grupo bancario, bajo mi liderazgo como CISO Global, lo que llevó al compromiso de los permisos de acceso de un usuario. El grupo de ransomware Play explotó este acceso para exfiltrar información con fines de extorsión después de lanzar un ataque.
 
-## Successful Response to a Major Security Incident
+## Respuesta exitosa ante un incidente de seguridad importante
 
-The attack was detected post-launch, attributed to improperly configured alerts for indicators of compromise, primarily due to a communication gap about their existence from the compromised entity. Response measures were promptly and effectively localized, allowing for the removal of the compromised production environment and the establishment of isolated environments for forensic analysis and the deployment of new services in a secured manner. Notably, we opted against utilizing Active Directory backups, choosing instead to rebuild them from the ground up.
+El ataque se detectó después de su lanzamiento, debido a alertas mal configuradas para indicadores de compromiso, principalmente por una falta de comunicación sobre su existencia por parte de la entidad comprometida. Las medidas de respuesta se localizaron rápidamente y de manera efectiva, permitiendo la eliminación del entorno de producción comprometido y el establecimiento de entornos aislados para análisis forense y la implementación de nuevos servicios de manera segura. Notablemente, optamos por no utilizar copias de seguridad de Active Directory, eligiendo en su lugar reconstruirlas desde cero.
 
-An immediate crisis management framework was put in place, facilitating transparent communication with both internal and external stakeholders, including regulators and customers, regarding the incident. This approach ensured consistent updates without the need for a specialized communication agency.
+Se estableció de inmediato un marco de gestión de crisis, facilitando la comunicación transparente tanto con partes interesadas internas como externas, incluidos reguladores y clientes, respecto al incidente. Este enfoque aseguró actualizaciones consistentes sin la necesidad de una agencia de comunicación especializada.
 
-The cornerstone of our successful incident response strategy included rapid action, comprehensive forensic analysis, and efficient team communication. By isolating the affected systems, eliminating the threat, and restoring operations with minimal downtime, we significantly mitigated the attack's impact. Future enhancements could focus on improved threat detection through advanced monitoring, asset identification, and AI-driven anomaly detection.
+La piedra angular de nuestra estrategia de respuesta a incidentes exitosa incluyó acción rápida, análisis forense exhaustivo y comunicación eficiente del equipo. Al aislar los sistemas afectados, eliminar la amenaza y restaurar las operaciones con el mínimo tiempo de inactividad, mitigamos significativamente el impacto del ataque. Las mejoras futuras podrían centrarse en la detección de amenazas mejorada a través de monitoreo avanzado, identificación de activos y detección de anomalías impulsada por IA.
 
-## Coordination with Public Agency
+## Coordinación con la Agencia Pública
 
-I have demonstrated a consistent ability to coordinate our company's security operations effectively with national cybersecurity agencies, such as INCIBE, CNPIC, and CCN, during extensive malware campaigns and orchestrated DoS attacks. This cooperation entailed the exchange of threat intelligence, the implementation of recommended protective measures, and participation in joint briefings, highlighting the critical role of public-private partnerships in bolstering collective defense strategies against cyber threats.
+He demostrado una capacidad constante para coordinar eficazmente las operaciones de seguridad de nuestra empresa con agencias nacionales de ciberseguridad, como INCIBE, CNPIC y CCN, durante campañas extensas de malware y ataques DoS orquestados. Esta cooperación incluyó el intercambio de inteligencia sobre amenazas, la implementación de medidas de protección recomendadas y la participación en informes conjuntos, resaltando el papel crítico de las asociaciones público-privadas en fortalecer las estrategias de defensa colectiva contra las amenazas cibernéticas.
 
-Throughout my tenure as Global CISO, I also engaged with various regulatory and government organizations to ensure compliance and reinforce security measures. These interactions included collaborations with the Bank of Spain (Banco de España) for regulatory compliance and financial security, the Data Protection Agency (Agencia de Protección de Datos) for data privacy law adherence, and the National Center for the Protection of Critical Infrastructures (Centro Nacional de Protección de Infraestructuras Críticas - CNPIC) to protect essential services and infrastructure.
+A lo largo de mi mandato como CISO Global, también me involucré con varias organizaciones regulatorias y gubernamentales para asegurar el cumplimiento y reforzar las medidas de seguridad. Estas interacciones incluyeron colaboraciones con el Banco de España para cumplimiento regulatorio y seguridad financiera, la Agencia de Protección de Datos para la adhesión a las leyes de privacidad de datos, y el Centro Nacional de Protección de Infraestructuras Críticas (CNPIC) para proteger servicios e infraestructuras esenciales.
+
