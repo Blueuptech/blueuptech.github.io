@@ -9,7 +9,7 @@ Welcome to my blog! I'm a passionate professional in the field of cybersecurity 
 
 ## My Journey
 
-My journey in the tech industry began after graduating with a degree in Mathematics ( Computer Science ) , which laid the foundation for my career. I quickly developed a fascination for cybersecurity, realizing the critical role it plays in protecting information in our increasingly digital world. Over the years, I've had the opportunity to work with startups, public companies, and engage in thought leadership within the industry. These experiences have not only broadened my technical skills but also deepened my understanding of the strategic and operational aspects of IT.
+My career in the technology sector initiated during my university tenure, where I pursued a degree in Mathematics with a specialization in Computer Science. This academic foundation was instrumental in shaping my professional trajectory. I soon cultivated a profound interest in cybersecurity, recognizing its paramount importance in safeguarding data within our progressively digitalized society. Throughout my career, I have been privileged to collaborate with both startups and publicly traded corporations, in addition to contributing to thought leadership in the field. These varied experiences have not only expanded my technical expertise but have also enriched my comprehension of the strategic and operational dimensions of Information Technology.
 
 ## What I Do
 

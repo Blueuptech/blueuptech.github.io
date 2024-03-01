@@ -9,7 +9,7 @@ featured_image: '/images/portada.jpg'
 
 ## Mi Trayectoria
 
-Mi viaje en la industria tecnológica comenzó después de graduarme con un título en Matemáticas (Ciencias de la Computación), lo que sentó las bases de mi carrera. Rápidamente desarrollé una fascinación por la ciberseguridad, al darme cuenta del papel crítico que juega en la protección de la información en nuestro mundo cada vez más digital. A lo largo de los años, he tenido la oportunidad de trabajar con startups, empresas públicas y participar en el liderazgo de pensamiento dentro de la industria. Estas experiencias no solo han ampliado mis habilidades técnicas, sino también han profundizado mi comprensión de los aspectos estratégicos y operativos de la TI.
+Mi carrera en el sector tecnológico comenzó durante mi etapa universitaria, estudiando una licenciatura en Matemáticas con especialización en Ciencias de la Computación. Esta base académica fue fundamental para dar forma a mi trayectoria profesional. Pronto desarrollé un profundo interés en la ciberseguridad, reconociendo su importancia primordial en la protección de datos dentro de nuestra sociedad cada vez más digitalizada. A lo largo de mi carrera, he tenido el privilegio de colaborar tanto con startups como con corporaciones cotizadas en bolsa, además de contribuir al liderazgo de pensamiento en el campo. Estas experiencias variadas no solo han ampliado mi experiencia técnica, sino que también han enriquecido mi comprensión de las dimensiones estratégicas y operativas de la Tecnología de la Información.
 
 ## Lo Que Hago
 
