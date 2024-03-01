@@ -1,7 +1,7 @@
 ---
 title: "Education"
 date: 2024-02-07
-featured_image: '/images/cover.jpg'
+featured_image: '/images/education.jpg'
 ---
 
 ## High School Performance
