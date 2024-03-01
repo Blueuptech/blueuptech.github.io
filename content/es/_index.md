@@ -3,6 +3,7 @@ title: "CyberStrings "
 date: 2024-02-07
 description: "Blog Personal"
 theme_version: '2.8.2'
+contentdir: "content/es"
 cascade:
   featured_image: '/images/portada.jpg'
 ---
