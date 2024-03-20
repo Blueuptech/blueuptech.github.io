@@ -2,7 +2,7 @@
 title: "AI: Descubrimiento, Clasificación y Orquestación"
 date: 2024-03-20
 omit_header_text: true
-featured_image: '/images/ISMS.jpg'
+featured_image: '/images/ISMS.jpeg'
 ---
 
 ## Introducción
