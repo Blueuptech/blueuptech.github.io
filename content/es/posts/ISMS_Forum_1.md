@@ -18,16 +18,17 @@ El descubrimiento de IA implica el proceso a través del cual los sistemas de IA
 ### Métodos de Descubrimiento de IA
 
 El descubrimiento de IA se basa en una variedad de metodologías, incluyendo, pero no limitado a:
-- **Minería de Datos**: Buscar en grandes conjuntos de datos para encontrar patrones o información relevante.
-- **Procesamiento del Lenguaje Natural (PLN)**: Entender e interpretar el lenguaje humano para generar nuevas perspectivas o respuestas.
-- **Redes Neuronales**: Imitar la estructura y función del cerebro humano para descubrir patrones complejos en datos.
+ **Minería de Datos**: Buscar en grandes conjuntos de datos para encontrar patrones o información relevante.
+ **Procesamiento del Lenguaje Natural (PLN)**: Entender e interpretar el lenguaje humano para generar nuevas perspectivas o respuestas.
+ **Redes Neuronales**: Imitar la estructura y función del cerebro humano para descubrir patrones complejos en datos.
 
 ### Ejemplos en Varios Campos
 
 El descubrimiento de IA ha llevado a avances significativos en múltiples dominios:
-- En el cuidado de la salud, los algoritmos de IA pueden identificar patrones previamente no reconocidos en datos de pacientes, lo que lleva a diagnósticos tempranos de enfermedades.
-- En finanzas, los sistemas de IA descubren transacciones fraudulentas reconociendo patrones que se desvían de la norma.
-- En ciencia ambiental, la IA ayuda a descubrir nuevas formas de modelar el cambio climático o predecir desastres naturales.
+
+* En el cuidado de la salud, los algoritmos de IA pueden identificar patrones previamente no reconocidos en datos de pacientes, lo que lleva a diagnósticos tempranos de enfermedades.
+* En finanzas, los sistemas de IA descubren transacciones fraudulentas reconociendo patrones que se desvían de la norma.
+* En ciencia ambiental, la IA ayuda a descubrir nuevas formas de modelar el cambio climático o predecir desastres naturales.
 
 ## Clasificación de IA
 
@@ -43,10 +44,10 @@ La clasificación en IA juega un papel fundamental en la interpretación y el an
 
 Las técnicas de clasificación en IA varían en complejidad y se eligen en función de la naturaleza del problema y del conjunto de datos. Algunas de las técnicas más utilizadas incluyen:
 
-- **Árboles de Decisión**: Utilizan un modelo de decisiones y sus posibles consecuencias, incluyendo resultados, costos y utilidad.
-- **K-Nearest Neighbors (K-NN)**: Clasifica datos basándose en las muestras más cercanas en el espacio de características.
-- **Máquinas de Vectores de Soporte (SVM)**: Encuentran el hiperplano que mejor separa las clases de datos en el espacio de características.
-- **Redes Neuronales y Deep Learning**: Modelos que imitan la estructura del cerebro humano para realizar clasificaciones complejas.
+ **Árboles de Decisión**: Utilizan un modelo de decisiones y sus posibles consecuencias, incluyendo resultados, costos y utilidad.
+ **K-Nearest Neighbors (K-NN)**: Clasifica datos basándose en las muestras más cercanas en el espacio de características.
+ **Máquinas de Vectores de Soporte (SVM)**: Encuentran el hiperplano que mejor separa las clases de datos en el espacio de características.
+ **Redes Neuronales y Deep Learning**: Modelos que imitan la estructura del cerebro humano para realizar clasificaciones complejas.
 
 ### Impacto en la Toma de Decisiones
 
@@ -60,14 +61,14 @@ La orquestación de IA se refiere a la coordinación y gestión de múltiples si
 
 A medida que las aplicaciones de IA se vuelven más complejas y omnipresentes, la necesidad de orquestar estos sistemas se hace cada vez más crítica. La orquestación de IA permite:
 
-- **Integración de Sistemas**: Asegurar que diversos sistemas de IA y automatizados funcionen juntos de manera armoniosa.
-- **Gestión de Recursos**: Optimizar el uso de recursos computacionales y de datos entre diferentes procesos de IA.
-- **Automatización de Procesos**: Coordinar tareas y procesos automatizados para mejorar la eficiencia operativa.
+ **Integración de Sistemas**: Asegurar que diversos sistemas de IA y automatizados funcionen juntos de manera armoniosa.
+ **Gestión de Recursos**: Optimizar el uso de recursos computacionales y de datos entre diferentes procesos de IA.
+ **Automatización de Procesos**: Coordinar tareas y procesos automatizados para mejorar la eficiencia operativa.
 
 ### Ejemplos de Orquestación de IA en la Práctica
 
-- En el ámbito empresarial, la orquestación de IA facilita la automatización de procesos de negocio, desde la atención al cliente hasta la gestión de la cadena de suministro.
-- En la tecnología de la información, ayuda en la gestión de cargas de trabajo en la nube, optimizando el rendimiento y la escalabilidad de las aplicaciones basadas en IA.
+* En el ámbito empresarial, la orquestación de IA facilita la automatización de procesos de negocio, desde la atención al cliente hasta la gestión de la cadena de suministro.
+* En la tecnología de la información, ayuda en la gestión de cargas de trabajo en la nube, optimizando el rendimiento y la escalabilidad de las aplicaciones basadas en IA.
 
 ## Desafíos y Soluciones
 
