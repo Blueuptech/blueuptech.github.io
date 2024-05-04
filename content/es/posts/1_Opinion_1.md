@@ -12,13 +12,13 @@ featured_image_alt: '/images/talento-ciber.jpg'
 En los últimos meses he tenido la oportunidad y la necesidad de mirar más de cerca como estamos en general la comunidad ciber , no sólo en términos de volumen de mercado respecto a otros tipos de proyectos/servicios , relevancia para el negocio , oferta de formación , creación de nuevos productos , empresas y aunque los retos son cada vez más y mayores , en todas los posibles indicadores hemos crecido y mejorado de modo claro y evidente. Las empresas especializadas en ciberseguridad apenas notaron la crisis y en caso de elegir la vía del emprendimiento existe un gran volumen de inversión disponible para nuestro sector. 
 
 1. **📈 Crecimiento y Resiliencia del Mercado de Ciberseguridad**
-   - La ciberseguridad en España ha mostrado un crecimiento notable, alcanzando un volumen de mercado de 1.950 millones de euros en 2022, con previsiones de crecimiento continuado. Las empresas del sector han demostrado una resiliencia significativa frente a las crisis económicas recientes. [Fuente](https://www.itreseller.es)
+   - La ciberseguridad en España ha mostrado un crecimiento notable, alcanzando un volumen de mercado de 1.950 millones de euros en 2022, con previsiones de crecimiento continuado. Las empresas del sector han demostrado una resiliencia significativa frente a las crisis económicas recientes.
 
 2. **🌐 Impacto de la Transformación Digital**
-   - Las empresas que integran eficazmente la ciberseguridad en sus procesos de transformación digital experimentan transformaciones más eficaces, lo que mejora su crecimiento y competitividad en el mercado. [Fuente](https://www.accenture.com)
+   - Las empresas que integran eficazmente la ciberseguridad en sus procesos de transformación digital experimentan transformaciones más eficaces, lo que mejora su crecimiento y competitividad en el mercado.
 
 3. **🚀 Importancia Estratégica de la Ciberseguridad**
-   - La ciberseguridad está ganando relevancia estratégica dentro de las empresas, siendo cada vez más común su inclusión en los consejos de administración. Esta integración ayuda a manejar mejor los riesgos y a optimizar las operaciones empresariales. [Fuente](https://www2.deloitte.com)
+   - La ciberseguridad está ganando relevancia estratégica dentro de las empresas, siendo cada vez más común su inclusión en los consejos de administración. Esta integración ayuda a manejar mejor los riesgos y a optimizar las operaciones empresariales. 
 
 Desde un punto de vista de peso institucional existe desde hace tiempo la “recomendación” de que la Ciberseguridad esté representada en los consejos de  administración y de modo nacional estamos discutiendo qué gobierno es el más adecuado , pero en uno u otro caso, parece claro que existe la intención de impulsar las iniciativas Ciber :
 

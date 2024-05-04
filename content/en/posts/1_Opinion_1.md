@@ -12,13 +12,13 @@ featured_image_alt: '/images/talento-ciber.jpg'
 In recent months, I have had the opportunity and necessity to look more closely at how we are, in general, in the cybersecurity community. This observation includes not only market volume in comparison to other types of projects/services but also its relevance to the business, training offerings, and the creation of new products and companies. Despite the challenges becoming increasingly numerous and significant, we have seen clear and evident growth and improvement in all possible indicators. Companies specializing in cybersecurity have barely noticed the crisis, and for those opting for entrepreneurship, there is a large volume of investment available in our sector.
 
 1. **📈 Growth and Resilience of the Cybersecurity Market**
-   - Cybersecurity in Spain has shown significant growth, reaching a market volume of 1.95 billion euros in 2022, with continued growth expected. The companies in the sector have demonstrated significant resilience against recent economic crises. [Source](https://www.itreseller.es)
+   - Cybersecurity in Spain has shown significant growth, reaching a market volume of 1.95 billion euros in 2022, with continued growth expected. The companies in the sector have demonstrated significant resilience against recent economic crises.
 
 2. **🌐 Impact of Digital Transformation**
-   - Companies that effectively integrate cybersecurity into their digital transformation processes experience more effective transformations, which improves their growth and competitiveness in the market. [Source](https://www.accenture.com)
+   - Companies that effectively integrate cybersecurity into their digital transformation processes experience more effective transformations, which improves their growth and competitiveness in the market.
 
 3. **🚀 Strategic Importance of Cybersecurity**
-   - Cybersecurity is gaining strategic importance within companies, increasingly being included in board discussions. This integration helps better manage risks and optimize business operations. [Source](https://www2.deloitte.com)
+   - Cybersecurity is gaining strategic importance within companies, increasingly being included in board discussions. This integration helps better manage risks and optimize business operations.
 
 From an institutional standpoint, there has long been a "recommendation" that cybersecurity be represented on the board of directors. Nationally, we are discussing what the most appropriate governance would be, but in any case, it seems clear that there is an intention to push forward cybersecurity initiatives:
 
