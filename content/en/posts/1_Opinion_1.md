@@ -8,7 +8,6 @@ omit_header_text: true
 featured_image: '/images/talento-ciber.jpg'
 featured_image_alt: '/images/talento-ciber.jpg'
 ---
-## 📈 Growth and Resilience in the Cybersecurity Market
 
 In recent months, I have had the opportunity and necessity to look more closely at how we are, in general, in the cybersecurity community. This observation includes not only market volume in comparison to other types of projects/services but also its relevance to the business, training offerings, and the creation of new products and companies. Despite the challenges becoming increasingly numerous and significant, we have seen clear and evident growth and improvement in all possible indicators. Companies specializing in cybersecurity have barely noticed the crisis, and for those opting for entrepreneurship, there is a large volume of investment available in our sector.
 
