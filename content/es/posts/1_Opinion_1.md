@@ -18,7 +18,7 @@ En los últimos meses he tenido la oportunidad y la necesidad de mirar más de c
    - Las empresas que integran eficazmente la ciberseguridad en sus procesos de transformación digital experimentan transformaciones más eficaces, lo que mejora su crecimiento y competitividad en el mercado.
 
 3. **🚀 Importancia Estratégica de la Ciberseguridad**
-   - La ciberseguridad está ganando relevancia estratégica dentro de las empresas, siendo cada vez más común su inclusión en los consejos de administración. Esta integración ayuda a manejar mejor los riesgos y a optimizar las operaciones empresariales. 
+   - La ciberseguridad está ganando relevancia estratégica dentro de las empresas, siendo cada vez más común su inclusión en los consejos de administración. Esta integración ayuda a manejar mejor los riesgos y a optimizar las operaciones empresariales.
 
 Desde un punto de vista de peso institucional existe desde hace tiempo la “recomendación” de que la Ciberseguridad esté representada en los consejos de  administración y de modo nacional estamos discutiendo qué gobierno es el más adecuado , pero en uno u otro caso, parece claro que existe la intención de impulsar las iniciativas Ciber :
 
