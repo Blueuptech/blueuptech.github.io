@@ -2,7 +2,7 @@
 title: "ISMS"
 featured_image: ''
 omit_header_text: true
-description: "Complete el cuestionario de clasificación de impacto"
+description: "Complete the Impact Classification Questionnaire "
 type: page
 menu:
   main:
@@ -17,9 +17,10 @@ menu:
     margin: 0;
     padding: 0;
   }
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
 </style>
-
-<link rel="stylesheet" href="/css/custom.css">
-
 
 <iframe src="/cuestionario.html" class="full-width-iframe"></iframe>
