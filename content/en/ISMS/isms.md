@@ -1,10 +1,10 @@
 ---
-title: "Cuestionario"
+title: ""
 featured_image: ''
 omit_header_text: true
 description: "Complete el cuestionario de clasificación de impacto"
 type: page
-menu: 
+menu:
   main:
     weight: 5
 ---
