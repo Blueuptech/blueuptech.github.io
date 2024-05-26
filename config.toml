@@ -19,57 +19,57 @@ enableRobotsTXT = true
       identifier = "home"
       name = "Home"
       url = "/"
-      weight = 1
+      weight = 2
     [[languages.en.menu.main]]
       identifier = "posts"
       name = "Posts"
       url = "/posts"
-      weight = 2
+      weight = 3
     [[languages.en.menu.main]]
       identifier = "about"
       name = "About"
       url = "/about"
-      weight = 3
+      weight = 4
     [[languages.en.menu.main]]
       identifier = "contact"
       name = "Contact"
       url = "/contact"
-      weight = 4
+      weight = 5
     [[languages.en.menu.main]]
       identifier = "isms"
       name = "ISMS"
       url = "/en/isms/"
-      weight = 5
+      weight = 6
 
   [languages.es]
     title = "CyberStrings"
-    weight = 2
+    weight = 1
     contentDir = "content/es"
     [[languages.es.menu.main]]
       identifier = "home"
       name = "Inicio"
       url = "/es/"
-      weight = 1
+      weight = 2
     [[languages.es.menu.main]]
       identifier = "posts"
       name = "Publicaciones"
       url = "/es/posts/"
-      weight = 2
+      weight = 3
     [[languages.es.menu.main]]
       identifier = "about"
       name = "Acerca de"
       url = "/es/about/"
-      weight = 3
+      weight = 4
     [[languages.es.menu.main]]
       identifier = "contact"
       name = "Contacto"
       url = "/es/contact/"
-      weight = 4
+      weight = 5
     [[languages.es.menu.main]]
       identifier = "isms"
       name = "ISMS"
       url = "/es/isms/"
-      weight = 5
+      weight = 6
 
 [sitemap]
   changefreq = "monthly"
