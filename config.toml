@@ -70,6 +70,11 @@ enableRobotsTXT = true
       name = "ISMS"
       url = "/es/isms"
       weight = 4
+    [[languages.es.menu.main]]
+      identifier = "cuestionario"
+      name = "Cuestionario"
+      url = "/es/cuestionario"
+      weight = 5
 
 [sitemap]
   changefreq = "monthly"
@@ -96,3 +101,8 @@ url = "https://github.com/arnavarr"
 [[params.ananke_socials]]
 name = "LinkedIn"
 url = "https://www.linkedin.com/in/arturonavarro/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
