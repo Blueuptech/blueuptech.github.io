@@ -35,11 +35,11 @@ enableRobotsTXT = true
       name = "Contact"
       url = "/contact"
       weight = 5
-    #[[languages.en.menu.main]]
-    #  identifier = "isms"
-    #  name = "ISMS"
-    #  url = "/isms"
-    #  weight = 6
+    # [[languages.en.menu.main]]
+    # identifier = "isms"
+    # name = "ISMS"
+    # url = "/en/isms/"
+    # weight = 6
 
   [languages.es]
     title = "CyberStrings"
@@ -65,11 +65,11 @@ enableRobotsTXT = true
       name = "Contacto"
       url = "/es/contact/"
       weight = 5
-    #[[languages.es.menu.main]]
+    # [[languages.es.menu.main]]
     # identifier = "isms"
-    #  name = "SGSI"
-    #  url = "/es/isms/"
-    #  weight = 6
+    # name = "SGSI"
+    # url = "/es/isms/"
+    # weight = 6
 
 [sitemap]
   changefreq = "monthly"
