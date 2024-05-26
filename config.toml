@@ -70,11 +70,6 @@ enableRobotsTXT = true
       name = "ISMS"
       url = "/es/isms"
       weight = 4
-    [[languages.es.menu.main]]
-      identifier = "cuestionario"
-      name = "Cuestionario"
-      url = "/es/cuestionario"
-      weight = 5
 
 [sitemap]
   changefreq = "monthly"
