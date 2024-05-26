@@ -19,4 +19,7 @@ menu:
   }
 </style>
 
+<link rel="stylesheet" href="/css/custom.css">
+
+
 <iframe src="/cuestionario.html" class="full-width-iframe"></iframe>
