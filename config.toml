@@ -38,7 +38,7 @@ enableRobotsTXT = true
     [[languages.en.menu.main]]
       identifier = "isms"
       name = "ISMS"
-      url = "/en/ISMS"
+      url = "/en/isms"
       weight = 4
 
   [languages.es]
@@ -68,7 +68,7 @@ enableRobotsTXT = true
     [[languages.es.menu.main]]
       identifier = "isms"
       name = "ISMS"
-      url = "/es/ISMS"
+      url = "/es/isms"
       weight = 4
 
 [sitemap]
