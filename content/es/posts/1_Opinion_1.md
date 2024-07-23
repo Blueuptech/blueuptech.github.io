@@ -9,6 +9,7 @@ featured_image: '/images/talento-ciber.jpg'
 featured_image_alt: '/images/talento-ciber.jpg'
 ---
 
+
 En los últimos meses he tenido la oportunidad y la necesidad de mirar más de cerca como estamos en general la comunidad ciber , no sólo en términos de volumen de mercado respecto a otros tipos de proyectos/servicios , relevancia para el negocio , oferta de formación , creación de nuevos productos , empresas y aunque los retos son cada vez más y mayores , en todas los posibles indicadores hemos crecido y mejorado de modo claro y evidente. Las empresas especializadas en ciberseguridad apenas notaron la crisis y en caso de elegir la vía del emprendimiento existe un gran volumen de inversión disponible para nuestro sector. 
 
 1. **📈 Crecimiento y Resiliencia del Mercado de Ciberseguridad**
