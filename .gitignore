@@ -9,3 +9,7 @@ public/
 
 # Recursos generados (si es manejado por GitHub Actions)
 resources/_gen/
+
+
+.vs/
+

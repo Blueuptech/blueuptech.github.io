@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Security Considerations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2 {
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+            ul li {
+                background: #fff;
+                margin: 5px 0;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+            }
+
+                ul li::before {
+                    content: "•";
+                    color: #007BFF;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 1em;
+                    margin-left: -1em;
+                }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Security Considerations</h1>
+
+        <div class="section">
+            <h2>MLOps AI Security</h2>
+            <ul>
+                <li>Security ML Code</li>
+                <li>Analysis Tools</li>
+                <li>Machine Resource Management</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>MLOps Data</h2>
+            <ul>
+                <li>Security Data Collection</li>
+                <li>Security Data Verification</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>AI Infrastructure</h2>
+            <ul>
+                <li>Serving Infrastructure</li>
+                <li>Monitoring</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Third Party Products</h2>
+            <ul>
+                <li>Certifications</li>
+                <li>MLOps Cycle</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>External Security Framework</h2>
+            <ul>
+                <li>Unmanaged Clients: Zero trust endpoints</li>
+                <li>API Providers: Secure connection configuration</li>
+                <li>Applications API Consumption: Secure Configuration, Device Availability & Recovery</li>
+                <li>Managed Clients (Company Devices & BYOD)</li>
+                <ul>
+                    <li>EDP-based filtering protection</li>
+                    <li>Threat protection</li>
+                    <li>Patch Management</li>
+                    <li>DLP data in use</li>
+                    <li>MDM/MAM Security</li>
+                    <li>Secure Config & Endpoint Lockdown</li>
+                    <li>Email and navigation control protection</li>
+                    <li>Certified Device</li>
+                </ul>
+                <li>Physical Devices / Controllers (IoT)</li>
+                <ul>
+                    <li>Secure Configuration</li>
+                    <li>Secure Platform</li>
+                    <li>Device Identification</li>
+                    <li>Data Protection</li>
+                    <li>Software Update</li>
+                    <li>Device Availability & Recovery</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Infrastructure Security Framework</h2>
+            <ul>
+                <li>Boundary Security</li>
+                <ul>
+                    <li>Boundary vertical filtering</li>
+                    <li>Boundary IDS/IPS</li>
+                    <li>Isolation Zone</li>
+                    <li>L4/L7 Gateway</li>
+                    <li>DLP in-motion</li>
+                    <li>DOS/DDoS</li>
+                    <li>Advance Malware Detection</li>
+                    <li>BOT Defense</li>
+                    <li>Boundary Application Filtering</li>
+                    <li>Email protection</li>
+                    <li>Endpoint Security as a Service</li>
+                    <li>Boundary Protection Availability & Recovery</li>
+                </ul>
+                <li>Network Security</li>
+                <ul>
+                    <li>Internal Horizontal Filtering</li>
+                    <li>Internal Network IDS/IPS</li>
+                    <li>Network Access Control</li>
+                    <li>Wireless Protection</li>
+                    <li>Navigation Control Filtering</li>
+                    <li>VPN Concentrators</li>
+                    <li>DNS(sec)</li>
+                    <li>Network Segmentation / Flow Control</li>
+                    <li>Internal L4/L7 Gateway</li>
+                    <li>Network Availability & Recovery</li>
+                </ul>
+                <li>Server Security</li>
+                <ul>
+                    <li>Anti-Malware</li>
+                    <li>Sensitive File Protection</li>
+                    <li>Host Based filtering Protection</li>
+                    <li>HIPS/HIDS & Anomaly Detection</li>
+                    <li>OS Hardening</li>
+                    <li>Server Availability & Recovery</li>
+                </ul>
+                <li>Container Security</li>
+                <ul>
+                    <li>Trusted base images</li>
+                    <li>Keep images up to date</li>
+                    <li>Reduce the attack surface</li>
+                    <li>Limit container privileges</li>
+                    <li>Access Controls</li>
+                    <li>Images Vulnerability Scan</li>
+                    <li>Network Security for Containers</li>
+                    <li>Monitor Container Activity</li>
+                    <li>Container Isolation</li>
+                    <li>Container Configuration Management</li>
+                    <li>Security Container images in a CI/CD pipeline</li>
+                    <li>Data Availability & Recovery</li>
+                </ul>
+                <li>Data & Cryptography Security</li>
+                <ul>
+                    <li>DATA at Rest Encryption</li>
+                    <li>DATA in transit Encryption</li>
+                    <li>Data Obfuscation Masking</li>
+                    <li>Encryption Key</li>
+                    <li>PKI Certification Authority</li>
+                    <li>Digital Signature</li>
+                    <li>Data Discovery Classification</li>
+                    <li>Credential Access</li>
+                    <li>DATA Process Destroy</li>
+                    <li>Data Loss Prevention</li>
+                    <li>Secure Disposal of Data</li>
+                    <li>Data Protection</li>
+                    <li>Secure Data Backup & Recovery</li>
+                    <li>Database Secure Gateway</li>
+                    <li>Data Residential</li>
+                    <li>Data Availability & Recovery</li>
+                </ul>
+                <li>Application Security</li>
+                <ul>
+                    <li>Secure Development Lifecycle</li>
+                    <li>Application Testing (SAST, DAST, RAST)</li>
+                    <li>API/SOA, Libraries and Components Development security infrastructure</li>
+                    <li>Code Obfuscation</li>
+                    <li>Configuration/Parametrization Management</li>
+                    <li>Application Availability & Recovery</li>
+                </ul>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Management of Security Framework</h2>
+            <ul>
+                <li>Identity and Access Management</li>
+                <ul>
+                    <li>Isolate Plane Management</li>
+                    <li>Tier management protection</li>
+                    <li>Authorization Management</li>
+                    <li>IAM Auditing, analysis, reporting</li>
+                    <li>Identity Management</li>
+                    <li>Authentication Management</li>
+                    <li>Privileged Access Management</li>
+                    <li>Multi factor access</li>
+                    <li>Credential Management</li>
+                    <li>Policy Management</li>
+                    <li>PKI Management</li>
+                    <li>IAM & Access Services Availability & Recovery</li>
+                </ul>
+                <li>Monitoring Management</li>
+                <ul>
+                    <li>Secure Configuration & Lockdown</li>
+                    <li>Escalation Management</li>
+                    <li>Monitoring and assessment</li>
+                    <li>Event Correlation</li>
+                    <li>SOC</li>
+                    <li>Log Audit</li>
+                    <li>Penetration Security</li>
+                    <li>Vulnerability Mgmt</li>
+                    <li>Technical audits</li>
+                    <li>Security patch Mgmt</li>
+                    <li>Availability & Recovery Testing</li>
+                </ul>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

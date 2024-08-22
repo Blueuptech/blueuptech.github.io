@@ -1,13 +1,12 @@
 ---
-title: "CyberStrings "
+title: "ISMS"
+omit_header_text: true
 date: 2024-02-07
 theme_version: '2.8.2'
-contentdir: "content/es"
+contentdir: "isms/en"
 cascade:
   featured_image: '/images/portada.jpg'
-description: "Complete el cuestionario de clasificación de impacto"
+description: "Marco de Ciberseguridad"
 ---
 
-
-Bienvenido
-
+{{< iframe "/marco.html" >}}
