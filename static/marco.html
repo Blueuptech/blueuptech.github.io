@@ -1,256 +1,268 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Security Considerations</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-
-        h1, h2 {
-            color: #333;
-            border-bottom: 2px solid #ddd;
-            padding-bottom: 5px;
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-top: 20px;
-        }
-
-        h2 {
-            font-size: 1.5em;
-            margin-top: 15px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-            ul li {
-                background: #fff;
-                margin: 5px 0;
-                padding: 10px;
-                border: 1px solid #ddd;
-                border-radius: 5px;
-            }
-
-                ul li::before {
-                    content: "�";
-                    color: #007BFF;
-                    font-weight: bold;
-                    display: inline-block;
-                    width: 1em;
-                    margin-left: -1em;
-                }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Tarjetas de Estudio: Formas de Relieve, Cartografía y Modelado del Relieve</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+    #card {
+        max-width: 600px;
+        margin: auto;
+        text-align: center;
+    }
+    #question {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    #answer {
+        display: none;
+        font-size: 1.1em;
+        margin-bottom: 20px;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+        margin: 5px;
+    }
+    #result {
+        display: none;
+        font-size: 1.3em;
+        margin-top: 20px;
+    }
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1>AI Security Considerations</h1>
 
-        <div class="section">
-            <h2>MLOps AI Security</h2>
-            <ul>
-                <li>Security ML Code</li>
-                <li>Analysis Tools</li>
-                <li>Machine Resource Management</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>MLOps Data</h2>
-            <ul>
-                <li>Security Data Collection</li>
-                <li>Security Data Verification</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>AI Infrastructure</h2>
-            <ul>
-                <li>Serving Infrastructure</li>
-                <li>Monitoring</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Third Party Products</h2>
-            <ul>
-                <li>Certifications</li>
-                <li>MLOps Cycle</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>External Security Framework</h2>
-            <ul>
-                <li>Unmanaged Clients: Zero trust endpoints</li>
-                <li>API Providers: Secure connection configuration</li>
-                <li>Applications API Consumption: Secure Configuration, Device Availability & Recovery</li>
-                <li>Managed Clients (Company Devices & BYOD)</li>
-                <ul>
-                    <li>EDP-based filtering protection</li>
-                    <li>Threat protection</li>
-                    <li>Patch Management</li>
-                    <li>DLP data in use</li>
-                    <li>MDM/MAM Security</li>
-                    <li>Secure Config & Endpoint Lockdown</li>
-                    <li>Email and navigation control protection</li>
-                    <li>Certified Device</li>
-                </ul>
-                <li>Physical Devices / Controllers (IoT)</li>
-                <ul>
-                    <li>Secure Configuration</li>
-                    <li>Secure Platform</li>
-                    <li>Device Identification</li>
-                    <li>Data Protection</li>
-                    <li>Software Update</li>
-                    <li>Device Availability & Recovery</li>
-                </ul>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Infrastructure Security Framework</h2>
-            <ul>
-                <li>Boundary Security</li>
-                <ul>
-                    <li>Boundary vertical filtering</li>
-                    <li>Boundary IDS/IPS</li>
-                    <li>Isolation Zone</li>
-                    <li>L4/L7 Gateway</li>
-                    <li>DLP in-motion</li>
-                    <li>DOS/DDoS</li>
-                    <li>Advance Malware Detection</li>
-                    <li>BOT Defense</li>
-                    <li>Boundary Application Filtering</li>
-                    <li>Email protection</li>
-                    <li>Endpoint Security as a Service</li>
-                    <li>Boundary Protection Availability & Recovery</li>
-                </ul>
-                <li>Network Security</li>
-                <ul>
-                    <li>Internal Horizontal Filtering</li>
-                    <li>Internal Network IDS/IPS</li>
-                    <li>Network Access Control</li>
-                    <li>Wireless Protection</li>
-                    <li>Navigation Control Filtering</li>
-                    <li>VPN Concentrators</li>
-                    <li>DNS(sec)</li>
-                    <li>Network Segmentation / Flow Control</li>
-                    <li>Internal L4/L7 Gateway</li>
-                    <li>Network Availability & Recovery</li>
-                </ul>
-                <li>Server Security</li>
-                <ul>
-                    <li>Anti-Malware</li>
-                    <li>Sensitive File Protection</li>
-                    <li>Host Based filtering Protection</li>
-                    <li>HIPS/HIDS & Anomaly Detection</li>
-                    <li>OS Hardening</li>
-                    <li>Server Availability & Recovery</li>
-                </ul>
-                <li>Container Security</li>
-                <ul>
-                    <li>Trusted base images</li>
-                    <li>Keep images up to date</li>
-                    <li>Reduce the attack surface</li>
-                    <li>Limit container privileges</li>
-                    <li>Access Controls</li>
-                    <li>Images Vulnerability Scan</li>
-                    <li>Network Security for Containers</li>
-                    <li>Monitor Container Activity</li>
-                    <li>Container Isolation</li>
-                    <li>Container Configuration Management</li>
-                    <li>Security Container images in a CI/CD pipeline</li>
-                    <li>Data Availability & Recovery</li>
-                </ul>
-                <li>Data & Cryptography Security</li>
-                <ul>
-                    <li>DATA at Rest Encryption</li>
-                    <li>DATA in transit Encryption</li>
-                    <li>Data Obfuscation Masking</li>
-                    <li>Encryption Key</li>
-                    <li>PKI Certification Authority</li>
-                    <li>Digital Signature</li>
-                    <li>Data Discovery Classification</li>
-                    <li>Credential Access</li>
-                    <li>DATA Process Destroy</li>
-                    <li>Data Loss Prevention</li>
-                    <li>Secure Disposal of Data</li>
-                    <li>Data Protection</li>
-                    <li>Secure Data Backup & Recovery</li>
-                    <li>Database Secure Gateway</li>
-                    <li>Data Residential</li>
-                    <li>Data Availability & Recovery</li>
-                </ul>
-                <li>Application Security</li>
-                <ul>
-                    <li>Secure Development Lifecycle</li>
-                    <li>Application Testing (SAST, DAST, RAST)</li>
-                    <li>API/SOA, Libraries and Components Development security infrastructure</li>
-                    <li>Code Obfuscation</li>
-                    <li>Configuration/Parametrization Management</li>
-                    <li>Application Availability & Recovery</li>
-                </ul>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Management of Security Framework</h2>
-            <ul>
-                <li>Identity and Access Management</li>
-                <ul>
-                    <li>Isolate Plane Management</li>
-                    <li>Tier management protection</li>
-                    <li>Authorization Management</li>
-                    <li>IAM Auditing, analysis, reporting</li>
-                    <li>Identity Management</li>
-                    <li>Authentication Management</li>
-                    <li>Privileged Access Management</li>
-                    <li>Multi factor access</li>
-                    <li>Credential Management</li>
-                    <li>Policy Management</li>
-                    <li>PKI Management</li>
-                    <li>IAM & Access Services Availability & Recovery</li>
-                </ul>
-                <li>Monitoring Management</li>
-                <ul>
-                    <li>Secure Configuration & Lockdown</li>
-                    <li>Escalation Management</li>
-                    <li>Monitoring and assessment</li>
-                    <li>Event Correlation</li>
-                    <li>SOC</li>
-                    <li>Log Audit</li>
-                    <li>Penetration Security</li>
-                    <li>Vulnerability Mgmt</li>
-                    <li>Technical audits</li>
-                    <li>Security patch Mgmt</li>
-                    <li>Availability & Recovery Testing</li>
-                </ul>
-            </ul>
-        </div>
+<div id="card">
+    <h1>Tarjetas de Estudio</h1>
+    <div id="question"></div>
+    <div id="answer"></div>
+    <button id="showAnswerBtn">Mostrar Respuesta</button>
+    <div id="buttons" style="display: none;">
+        <button id="correctBtn">¡Correcto!</button>
+        <button id="incorrectBtn">Incorrecto</button>
     </div>
+    <div id="result"></div>
+</div>
+
+<script>
+    const flashcards = [
+        {
+            "question": "¿Qué es una montaña?",
+            "answer": "Elevación natural del terreno que se eleva significativamente por encima de su entorno."
+        },
+        {
+            "question": "Define \"cordillera\".",
+            "answer": "Conjunto de montañas alineadas."
+        },
+        {
+            "question": "¿Qué es un valle?",
+            "answer": "Área de terreno bajo y alargado, situado entre montañas o colinas, generalmente recorrida por un río."
+        },
+        {
+            "question": "¿Cómo se define una llanura?",
+            "answer": "Extensión de terreno llano, con pocas variaciones en la altitud."
+        },
+        {
+            "question": "¿Qué caracteriza a una península?",
+            "answer": "Extensión de tierra rodeada de agua por todas partes excepto por una que la une al continente."
+        },
+        {
+            "question": "¿Qué es un archipiélago?",
+            "answer": "Conjunto de islas cercanas entre sí."
+        },
+        {
+            "question": "Define \"ría\".",
+            "answer": "Entrada del mar en la desembocadura de un río, formando un estuario."
+        },
+        {
+            "question": "¿Qué es un cabo en geografía?",
+            "answer": "Saliente de tierra que se adentra en el mar."
+        },
+        {
+            "question": "¿Cómo se describe un golfo?",
+            "answer": "Gran entrada de mar en la costa, de forma redondeada."
+        },
+        {
+            "question": "¿Qué es un ismo?",
+            "answer": "Franja estrecha de tierra que conecta dos grandes extensiones de tierra."
+        },
+        {
+            "question": "¿Qué define a una isla?",
+            "answer": "Porción de tierra rodeada completamente de agua."
+        },
+        {
+            "question": "¿Qué es la cartografía?",
+            "answer": "Disciplina dedicada a la representación de la superficie de la Tierra mediante mapas o planos."
+        },
+        {
+            "question": "¿Qué representa un mapa a pequeña escala?",
+            "answer": "Amplias zonas pero con poco nivel de detalle (ej. mapas de países)."
+        },
+        {
+            "question": "¿Qué muestra un mapa a gran escala?",
+            "answer": "Zonas más concretas con gran nivel de detalle (ej. planos de ciudades)."
+        },
+        {
+            "question": "¿Qué información ofrecen los mapas generales?",
+            "answer": "Una visión general del territorio, representando elementos físicos y políticos."
+        },
+        {
+            "question": "¿Para qué se utilizan los mapas temáticos?",
+            "answer": "Presentar información específica sobre un tema en particular, como clima o densidad de población."
+        },
+        {
+            "question": "¿Qué es la teledetección?",
+            "answer": "Técnica para obtener información sobre la superficie de la Tierra mediante satélites y sensores."
+        },
+        {
+            "question": "¿Qué implica la cartografía informatizada?",
+            "answer": "Uso de la informática para crear y analizar mapas de manera más rápida y precisa."
+        },
+        {
+            "question": "¿Qué son los SIG?",
+            "answer": "Herramientas informáticas que permiten almacenar y analizar información geográfica en bases de datos."
+        },
+        {
+            "question": "¿Para qué sirve el GPS?",
+            "answer": "Determinar la ubicación exacta en la superficie de la Tierra utilizando satélites."
+        },
+        {
+            "question": "¿Qué es el plegamiento?",
+            "answer": "Deformación de los estratos de rocas debido a la presión, creando ondulaciones."
+        },
+        {
+            "question": "Define \"falla\" en geología.",
+            "answer": "Fractura en la corteza terrestre donde se desplazan bloques de roca."
+        },
+        {
+            "question": "¿Qué ocurre durante una erupción volcánica?",
+            "answer": "Expulsión de magma y gases desde el interior de la Tierra."
+        },
+        {
+            "question": "¿Qué es un terremoto y cuáles son sus puntos clave?",
+            "answer": "Movimiento brusco de la corteza terrestre, originado en el hipocentro; su proyección en la superficie es el epicentro."
+        },
+        {
+            "question": "¿Qué efectos tienen los movimientos de las placas tectónicas?",
+            "answer": "Forman dorsales oceánicas, cordilleras y causan terremotos y actividad volcánica."
+        },
+        {
+            "question": "¿Qué propone la teoría de la deriva continental de Wegener?",
+            "answer": "Que los continentes estuvieron unidos en un supercontinente llamado Pangea y luego se separaron."
+        },
+        {
+            "question": "¿Cómo afecta el agua al modelado del relieve?",
+            "answer": "Causa erosión y transporte de sedimentos mediante ríos, lluvia y hielo."
+        },
+        {
+            "question": "¿Cuál es el impacto del viento en el relieve?",
+            "answer": "Desgasta rocas y transporta partículas, formando dunas y modificando la topografía."
+        },
+        {
+            "question": "¿Qué papel juega la vegetación en la erosión?",
+            "answer": "Protege el suelo de la erosión al fijar las partículas con sus raíces."
+        },
+        {
+            "question": "¿Cómo influye la temperatura en el desgaste de rocas?",
+            "answer": "La expansión y contracción por cambios térmicos provoca fracturas y desgaste."
+        },
+        {
+            "question": "¿Cómo contribuye la actividad humana a la erosión?",
+            "answer": "Actividades como agricultura y construcción exponen el suelo a la degradación."
+        },
+        {
+            "question": "¿Qué efectos tiene la deforestación en el suelo?",
+            "answer": "Reduce la protección del suelo, aumenta la erosión y modifica el clima local."
+        },
+        {
+            "question": "¿Cómo altera la construcción el relieve natural?",
+            "answer": "Modifica el terreno y los patrones naturales de erosión y sedimentación."
+        },
+        {
+            "question": "¿Qué explica la teoría de la deriva continental?",
+            "answer": "Cómo los continentes se han desplazado formando nuevas configuraciones geográficas."
+        },
+        {
+            "question": "¿Cuál es la base de la teoría de la tectónica de placas?",
+            "answer": "Los continentes y océanos están sobre placas tectónicas que se mueven por la actividad del manto terrestre."
+        },
+        {
+            "question": "¿Qué es una dorsal oceánica?",
+            "answer": "Cordillera submarina donde se forma nueva corteza oceánica."
+        },
+        {
+            "question": "Define \"maremoto\".",
+            "answer": "Movimiento sísmico submarino que provoca grandes olas."
+        },
+        {
+            "question": "¿Qué es un rift continental?",
+            "answer": "Fisura en la superficie de un continente causada por fuerzas tectónicas."
+        },
+        {
+            "question": "¿Qué miden las escalas de Richter y Mercalli?",
+            "answer": "Richter mide la energía liberada; Mercalli mide los efectos destructivos en la superficie."
+        }
+    ];
+
+    let currentCard = 0;
+    let score = 0;
+
+    const questionEl = document.getElementById('question');
+    const answerEl = document.getElementById('answer');
+    const showAnswerBtn = document.getElementById('showAnswerBtn');
+    const buttonsEl = document.getElementById('buttons');
+    const correctBtn = document.getElementById('correctBtn');
+    const incorrectBtn = document.getElementById('incorrectBtn');
+    const resultEl = document.getElementById('result');
+
+    function showCard(index) {
+        questionEl.textContent = flashcards[index].question;
+        answerEl.textContent = flashcards[index].answer;
+        answerEl.style.display = 'none';
+        buttonsEl.style.display = 'none';
+        showAnswerBtn.style.display = 'inline-block';
+    }
+
+    showAnswerBtn.addEventListener('click', () => {
+        answerEl.style.display = 'block';
+        showAnswerBtn.style.display = 'none';
+        buttonsEl.style.display = 'inline-block';
+    });
+
+    correctBtn.addEventListener('click', () => {
+        score++;
+        nextCard();
+    });
+
+    incorrectBtn.addEventListener('click', () => {
+        nextCard();
+    });
+
+    function nextCard() {
+        currentCard++;
+        if (currentCard < flashcards.length) {
+            showCard(currentCard);
+        } else {
+            showResult();
+        }
+    }
+
+    function showResult() {
+        questionEl.style.display = 'none';
+        answerEl.style.display = 'none';
+        buttonsEl.style.display = 'none';
+        showAnswerBtn.style.display = 'none';
+        resultEl.style.display = 'block';
+        resultEl.textContent = `¡Has completado el estudio! Tu puntaje es ${score} de ${flashcards.length}.`;
+    }
+
+    // Iniciar con la primera tarjeta
+    showCard(currentCard);
+</script>
+
 </body>
 </html>
