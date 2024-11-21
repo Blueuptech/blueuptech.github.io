@@ -61,7 +61,7 @@
   <button id="start-button" onclick="startGame()">Iniciar Juego</button>
 
   <script>
-    // Lista de tarjetas de memoria con respuestas
+    // Lista ampliada de tarjetas de memoria con respuestas
     const cards = [
       { question: "¿Cuál es el desierto más grande de África?", correct: "Sáhara", incorrect: "Kalahari" },
       { question: "Nombra un cabo importante de África.", correct: "Cabo Verde", incorrect: "Cabo York" },
@@ -74,7 +74,25 @@
       { question: "¿Cuál es el río más caudaloso de América?", correct: "Río Amazonas", incorrect: "Río Mississippi" },
       { question: "¿Qué cordillera importante está en Australia?", correct: "Gran Cordillera Divisoria", incorrect: "Cordillera de los Andes" },
       { question: "Nombra un cabo importante de Oceanía.", correct: "Cabo York", incorrect: "Cabo Comorin" },
-      { question: "¿Dónde está el Golfo de Carpentaria?", correct: "Oceanía", incorrect: "África" }
+      { question: "¿Dónde está el Golfo de Carpentaria?", correct: "Oceanía", incorrect: "África" },
+      { question: "¿Cuál es la montaña más alta del mundo?", correct: "Monte Everest", incorrect: "Monte Kilimanjaro" },
+      { question: "¿Qué río atraviesa Egipto?", correct: "Río Nilo", incorrect: "Río Ganges" },
+      { question: "¿Dónde está el Golfo de Guinea?", correct: "África", incorrect: "Asia" },
+      { question: "¿Cuál es el desierto más seco del mundo?", correct: "Desierto de Atacama", incorrect: "Desierto del Sahara" },
+      { question: "¿Dónde está la Gran Barrera de Coral?", correct: "Australia", incorrect: "América del Sur" },
+      { question: "¿Cuál es el punto más austral de América?", correct: "Cabo de Hornos", incorrect: "Cabo San Lucas" },
+      { question: "¿Dónde está el Lago Victoria?", correct: "África", incorrect: "Oceanía" },
+      { question: "¿Cuál es el océano más grande?", correct: "Océano Pacífico", incorrect: "Océano Atlántico" },
+      { question: "¿Dónde se encuentran las Montañas Rocosas?", correct: "América del Norte", incorrect: "Europa" },
+      { question: "¿Qué cordillera se encuentra en América del Sur?", correct: "Los Andes", incorrect: "Himalaya" },
+      { question: "¿Dónde está el Golfo de California?", correct: "América del Norte", incorrect: "África" },
+      { question: "¿Qué río es el más largo del mundo?", correct: "Río Amazonas", incorrect: "Río Yangtsé" },
+      { question: "¿Dónde se encuentra el Desierto de Gobi?", correct: "Asia", incorrect: "América del Norte" },
+      { question: "¿Qué país tiene el Altiplano de Mongolia?", correct: "Mongolia", incorrect: "India" },
+      { question: "¿Qué mar está al norte de Europa?", correct: "Mar del Norte", incorrect: "Mar de Java" },
+      { question: "¿Dónde está el Desierto de Arabia?", correct: "Asia", incorrect: "África" },
+      { question: "¿Qué río pasa por Nueva York?", correct: "Río Hudson", incorrect: "Río Nilo" },
+      { question: "¿Qué continente es conocido como el más frío?", correct: "Antártida", incorrect: "Europa" }
     ];
 
     let currentCardIndex = 0;
