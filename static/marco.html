@@ -51,29 +51,30 @@
   <div id="card-container" class="card">
     <p id="question"></p>
     <div class="buttons">
-      <button class="correct" onclick="answer(true)">Correcto</button>
-      <button class="incorrect" onclick="answer(false)">Incorrecto</button>
+      <button id="option1" onclick="selectAnswer(1)">Opción 1</button>
+      <button id="option2" onclick="selectAnswer(2)">Opción 2</button>
     </div>
+    <p id="feedback" style="margin-top: 20px; font-weight: bold;"></p>
   </div>
 
   <div id="result" class="result"></div>
   <button id="start-button" onclick="startGame()">Iniciar Juego</button>
 
   <script>
-    // Lista de tarjetas de memoria
+    // Lista de tarjetas de memoria con respuestas
     const cards = [
-      { question: "¿Cuál es el desierto más grande de África? - Sáhara", answer: true },
-      { question: "Nombra un cabo importante de África. - Cabo Verde", answer: true },
-      { question: "¿Qué valle se encuentra en África? - Valle del Rift", answer: true },
-      { question: "¿Dónde se encuentra el Himalaya? - Asia", answer: true },
-      { question: "Nombra un golfo importante en Asia. - Golfo de Bengala", answer: true },
-      { question: "¿Cuál es la meseta más alta de Asia? - Meseta del Tíbet", answer: true },
-      { question: "¿Dónde se encuentra el Aconcagua? - América del Sur", answer: true },
-      { question: "Nombra un golfo importante de América del Norte. - Golfo de México", answer: true },
-      { question: "¿Cuál es el río más caudaloso de América? - Río Amazonas", answer: true },
-      { question: "¿Qué cordillera importante está en Australia? - Gran Cordillera Divisoria", answer: true },
-      { question: "Nombra un cabo importante de Oceanía. - Cabo York", answer: true },
-      { question: "¿Dónde está el Golfo de Carpentaria? - Oceanía", answer: true }
+      { question: "¿Cuál es el desierto más grande de África?", correct: "Sáhara", incorrect: "Kalahari" },
+      { question: "Nombra un cabo importante de África.", correct: "Cabo Verde", incorrect: "Cabo York" },
+      { question: "¿Qué valle se encuentra en África?", correct: "Valle del Rift", incorrect: "Altiplano de Mongolia" },
+      { question: "¿Dónde se encuentra el Himalaya?", correct: "Asia", incorrect: "América del Norte" },
+      { question: "Nombra un golfo importante en Asia.", correct: "Golfo de Bengala", incorrect: "Golfo de México" },
+      { question: "¿Cuál es la meseta más alta de Asia?", correct: "Meseta del Tíbet", incorrect: "Meseta de Mato Grosso" },
+      { question: "¿Dónde se encuentra el Aconcagua?", correct: "América del Sur", incorrect: "Oceanía" },
+      { question: "Nombra un golfo importante de América del Norte.", correct: "Golfo de México", incorrect: "Golfo de Adén" },
+      { question: "¿Cuál es el río más caudaloso de América?", correct: "Río Amazonas", incorrect: "Río Mississippi" },
+      { question: "¿Qué cordillera importante está en Australia?", correct: "Gran Cordillera Divisoria", incorrect: "Cordillera de los Andes" },
+      { question: "Nombra un cabo importante de Oceanía.", correct: "Cabo York", incorrect: "Cabo Comorin" },
+      { question: "¿Dónde está el Golfo de Carpentaria?", correct: "Oceanía", incorrect: "África" }
     ];
 
     let currentCardIndex = 0;
@@ -96,21 +97,38 @@
       if (currentCardIndex < cards.length) {
         const card = cards[currentCardIndex];
         document.getElementById("question").innerText = card.question;
+
+        // Asignar opciones de forma aleatoria
+        const correctOption = Math.random() < 0.5 ? 1 : 2;
+        const incorrectOption = correctOption === 1 ? 2 : 1;
+        document.getElementById("option" + correctOption).innerText = card.correct;
+        document.getElementById("option" + incorrectOption).innerText = card.incorrect;
+
+        // Mostrar la tarjeta
         document.getElementById("card-container").style.display = "block";
+        document.getElementById("feedback").innerText = "";
       } else {
         endGame();
       }
     }
 
-    // Función para registrar la respuesta
-    function answer(isCorrect) {
-      if (cards[currentCardIndex].answer === isCorrect) {
+    // Función para manejar la selección de respuesta
+    function selectAnswer(option) {
+      const card = cards[currentCardIndex];
+      const selectedAnswer = document.getElementById("option" + option).innerText;
+
+      if (selectedAnswer === card.correct) {
         correctCount++;
+        document.getElementById("feedback").innerText = "¡Correcto!";
+        document.getElementById("feedback").style.color = "green";
       } else {
         incorrectCount++;
+        document.getElementById("feedback").innerText = "Incorrecto. La respuesta correcta era: " + card.correct;
+        document.getElementById("feedback").style.color = "red";
       }
+
       currentCardIndex++;
-      showNextCard();
+      setTimeout(showNextCard, 2000); // Mostrar la siguiente tarjeta después de 2 segundos
     }
 
     // Función para terminar el juego y mostrar resultados
