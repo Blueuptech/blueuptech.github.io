@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjetas de Memoria</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+    .card {
+      display: none;
+      padding: 20px;
+      margin: 20px auto;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      background-color: #f9f9f9;
+    }
+    .buttons {
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .correct {
+      background-color: #4caf50;
+      color: white;
+    }
+    .incorrect {
+      background-color: #f44336;
+      color: white;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tarjetas de Memoria</h1>
+  <div id="card-container" class="card">
+    <p id="question"></p>
+    <div class="buttons">
+      <button class="correct" onclick="answer(true)">Correcto</button>
+      <button class="incorrect" onclick="answer(false)">Incorrecto</button>
+    </div>
+  </div>
+
+  <div id="result" class="result"></div>
+  <button id="start-button" onclick="startGame()">Iniciar Juego</button>
+
+  <script>
+    // Lista de tarjetas de memoria
+    const cards = [
+      { question: "¿Cuál es el desierto más grande de África? - Sáhara", answer: true },
+      { question: "Nombra un cabo importante de África. - Cabo Verde", answer: true },
+      { question: "¿Qué valle se encuentra en África? - Valle del Rift", answer: true },
+      { question: "¿Dónde se encuentra el Himalaya? - Asia", answer: true },
+      { question: "Nombra un golfo importante en Asia. - Golfo de Bengala", answer: true },
+      { question: "¿Cuál es la meseta más alta de Asia? - Meseta del Tíbet", answer: true },
+      { question: "¿Dónde se encuentra el Aconcagua? - América del Sur", answer: true },
+      { question: "Nombra un golfo importante de América del Norte. - Golfo de México", answer: true },
+      { question: "¿Cuál es el río más caudaloso de América? - Río Amazonas", answer: true },
+      { question: "¿Qué cordillera importante está en Australia? - Gran Cordillera Divisoria", answer: true },
+      { question: "Nombra un cabo importante de Oceanía. - Cabo York", answer: true },
+      { question: "¿Dónde está el Golfo de Carpentaria? - Oceanía", answer: true }
+    ];
+
+    let currentCardIndex = 0;
+    let correctCount = 0;
+    let incorrectCount = 0;
+
+    // Función para iniciar el juego
+    function startGame() {
+      correctCount = 0;
+      incorrectCount = 0;
+      shuffleCards();
+      currentCardIndex = 0;
+      document.getElementById("start-button").style.display = "none";
+      document.getElementById("result").style.display = "none";
+      showNextCard();
+    }
+
+    // Función para mostrar la siguiente tarjeta
+    function showNextCard() {
+      if (currentCardIndex < cards.length) {
+        const card = cards[currentCardIndex];
+        document.getElementById("question").innerText = card.question;
+        document.getElementById("card-container").style.display = "block";
+      } else {
+        endGame();
+      }
+    }
+
+    // Función para registrar la respuesta
+    function answer(isCorrect) {
+      if (cards[currentCardIndex].answer === isCorrect) {
+        correctCount++;
+      } else {
+        incorrectCount++;
+      }
+      currentCardIndex++;
+      showNextCard();
+    }
+
+    // Función para terminar el juego y mostrar resultados
+    function endGame() {
+      document.getElementById("card-container").style.display = "none";
+      const resultText = `Juego terminado. Correctas: ${correctCount}, Incorrectas: ${incorrectCount}`;
+      document.getElementById("result").innerText = resultText;
+      document.getElementById("result").style.display = "block";
+      document.getElementById("start-button").style.display = "inline-block";
+    }
+
+    // Función para mezclar las tarjetas
+    function shuffleCards() {
+      for (let i = cards.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [cards[i], cards[j]] = [cards[j], cards[i]];
+      }
+    }
+  </script>
+
+</body>
+</html>
