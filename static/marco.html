@@ -47,7 +47,7 @@
 </head>
 <body>
 
-  <h1>Tarjetas de Memoria</h1>
+  <h1>Juego de Tarjetas de Memoria</h1>
   <div id="card-container" class="card">
     <p id="question"></p>
     <div class="buttons">
@@ -61,71 +61,61 @@
   <button id="start-button" onclick="startGame()">Iniciar Juego</button>
 
   <script>
-    // Lista de tarjetas de memoria con respuestas revisadas
     const cards = [
-      // África
-      { question: "¿Qué cordillera importante está en el norte de África?", correct: "Atlas", incorrect: "Himalaya" },
-      { question: "¿Qué valle africano es conocido por su actividad tectónica?", correct: "Valle del Rift", incorrect: "Gran Llanura Siberiana" },
-      { question: "¿Cuál es el desierto más grande de África?", correct: "Sáhara", incorrect: "Desierto de Gobi" },
-      { question: "Nombra un cabo importante de África.", correct: "Cabo Verde", incorrect: "Cabo de Hornos" },
-      { question: "¿Dónde se encuentra la Isla de Madeira?", correct: "África", incorrect: "Asia" },
-      { question: "¿Qué golfo está ubicado en la costa occidental de África?", correct: "Golfo de Guinea", incorrect: "Golfo de México" },
-      { question: "¿Dónde se encuentra la Península de Somalia?", correct: "África", incorrect: "Oceanía" },
-      { question: "¿Qué macizo montañoso está en África?", correct: "Macizo Etíope", incorrect: "Montes Urales" },
-      { question: "¿Qué isla africana es conocida por su biodiversidad?", correct: "Isla de Madagascar", incorrect: "Isla de Sumatra" },
-      { question: "¿Qué cabo marca el extremo sur de África?", correct: "Cabo de Buena Esperanza", incorrect: "Cabo York" },
-
-      // Asia
-      { question: "¿Qué cordillera divide Europa y Asia?", correct: "Montes Urales", incorrect: "Los Andes" },
-      { question: "¿Qué llanura es la más extensa de Asia?", correct: "Gran Llanura Siberiana", incorrect: "La Pampa" },
-      { question: "¿Dónde se encuentra el Desierto de Gobi?", correct: "Asia", incorrect: "África" },
-      { question: "¿Qué península está al este de Asia?", correct: "Península de Corea", incorrect: "Península de Yucatán" },
-      { question: "¿Dónde se encuentra el Archipiélago Japonés?", correct: "Asia", incorrect: "Oceanía" },
-      { question: "¿Qué desierto está en la Península Arábiga?", correct: "Desierto de Arabia", incorrect: "Sáhara" },
-      { question: "¿Dónde se encuentra la Península Arábiga?", correct: "Asia", incorrect: "América" },
-      { question: "¿Qué península se encuentra en el sur de Asia?", correct: "Península de Indostán", incorrect: "Península de Florida" },
-      { question: "¿Cuál es la meseta más alta de Asia?", correct: "Meseta del Tíbet", incorrect: "Meseta Etíope" },
-      { question: "¿Dónde está el Everest?", correct: "Asia", incorrect: "América del Norte" },
-      { question: "¿Qué península está al sureste de Asia?", correct: "Península de Indochina", incorrect: "Península de Labrador" },
-      { question: "¿Dónde se encuentra la Península de Malaca?", correct: "Asia", incorrect: "África" },
-      { question: "¿Qué isla se encuentra al sur de la India?", correct: "Sri Lanka", incorrect: "Taiwán" },
-      { question: "¿Dónde está la Isla de Sumatra?", correct: "Asia", incorrect: "América del Sur" },
-      { question: "¿Qué isla es la tercera más grande del mundo?", correct: "Borneo", incorrect: "Jamaica" },
-      { question: "¿Dónde se encuentra Taiwán?", correct: "Asia", incorrect: "Oceanía" },
-
-      // América
-      { question: "¿Dónde está Alaska?", correct: "América del Norte", incorrect: "Europa" },
-      { question: "¿Qué llanura se encuentra en América del Norte?", correct: "La Gran Llanura", incorrect: "Gran Llanura Siberiana" },
-      { question: "¿Dónde está la Península de Labrador?", correct: "América del Norte", incorrect: "Oceanía" },
-      { question: "¿Dónde está la Península de California Baja?", correct: "América del Norte", incorrect: "Asia" },
-      { question: "¿Qué isla está cerca de Canadá?", correct: "Isla de Terranova", incorrect: "Isla de Sumatra" },
-      { question: "¿Dónde está la Península de Florida?", correct: "América del Norte", incorrect: "Asia" },
-      { question: "¿Dónde se encuentra el Golfo de México?", correct: "América del Norte", incorrect: "África" },
-      { question: "¿Dónde están las Bahamas y las Grandes Antillas?", correct: "América Central", incorrect: "Oceanía" },
-      { question: "¿Dónde está la Península de Yucatán?", correct: "América del Norte", incorrect: "Asia" },
-      { question: "¿Qué isla caribeña incluye dos países?", correct: "La Española", incorrect: "Taiwán" },
-      { question: "¿Dónde está la Isla de Jamaica?", correct: "El Caribe", incorrect: "Oceanía" },
-      { question: "¿Dónde se encuentra el Cabo de Hornos?", correct: "América del Sur", incorrect: "África" },
-
-      // Oceanía
-      { question: "¿Qué región incluye Micronesia?", correct: "Oceanía", incorrect: "Asia" },
-      { question: "¿Dónde está Melanesia?", correct: "Oceanía", incorrect: "América del Norte" },
-      { question: "¿Qué región incluye Polinesia?", correct: "Oceanía", incorrect: "África" },
-      { question: "¿Dónde está el Estrecho de Torres?", correct: "Oceanía", incorrect: "Asia" },
-      { question: "¿Qué cordillera atraviesa Australia?", correct: "Gran Cordillera Divisoria", incorrect: "Los Andes" },
-      { question: "¿Dónde está el Gran Desierto de Victoria?", correct: "Australia", incorrect: "América del Norte" },
-      { question: "¿Dónde se encuentra la Gran Bahía Australiana?", correct: "Australia", incorrect: "Asia" },
-      { question: "¿Qué archipiélago está al sureste de Australia?", correct: "Nueva Zelanda", incorrect: "Filipinas" },
-      { question: "¿Dónde está el volcán Ruapehu?", correct: "Nueva Zelanda", incorrect: "Sri Lanka" },
-      { question: "¿Qué cordillera está en Nueva Zelanda?", correct: "Alpes del Sur", incorrect: "Montes Urales" },
-      { question: "¿Dónde está la Isla de Tasmania?", correct: "Australia", incorrect: "África" }
+      // Islas
+      { question: "¿Dónde está Islandia?", correct: "Atlántico Norte", incorrect: "Mediterráneo" },
+      { question: "¿Dónde está Gran Bretaña?", correct: "Europa Occidental", incorrect: "Oceanía" },
+      { question: "¿Dónde está Irlanda?", correct: "Europa Occidental", incorrect: "Asia" },
+      { question: "¿Dónde está Córcega?", correct: "Mediterráneo", incorrect: "Atlántico" },
+      { question: "¿Dónde está Cerdeña?", correct: "Mediterráneo", incorrect: "Mar del Norte" },
+      { question: "¿Dónde está Sicilia?", correct: "Mediterráneo", incorrect: "Caribe" },
+      { question: "¿Dónde está Creta?", correct: "Mediterráneo", incorrect: "Pacífico" },
+      { question: "¿Dónde está Chipre?", correct: "Mediterráneo Oriental", incorrect: "Atlántico" },
+      // Penínsulas
+      { question: "¿Dónde está la Península de Kola?", correct: "Rusia", incorrect: "Escandinavia" },
+      { question: "¿Dónde está la Península Escandinava?", correct: "Europa Septentrional", incorrect: "África" },
+      { question: "¿Dónde está la Península de Jutlandia?", correct: "Dinamarca", incorrect: "Italia" },
+      { question: "¿Dónde está la Península Itálica?", correct: "Europa Meridional", incorrect: "América" },
+      { question: "¿Dónde está la Península Balcánica?", correct: "Europa del Sudeste", incorrect: "Oceanía" },
+      { question: "¿Dónde está la Península de Crimea?", correct: "Europa Oriental", incorrect: "América del Norte" },
+      // Cordilleras y Montes
+      { question: "¿Dónde están los Montes Escandinavos?", correct: "Escandinavia", incorrect: "Asia Central" },
+      { question: "¿Dónde están los Montes Urales?", correct: "Rusia", incorrect: "Europa Occidental" },
+      { question: "¿Dónde están los Alpes?", correct: "Europa Central", incorrect: "Asia" },
+      { question: "¿Dónde está el Macizo Central Francés?", correct: "Francia", incorrect: "Alemania" },
+      { question: "¿Dónde están los Balcanes?", correct: "Europa del Sudeste", incorrect: "América del Sur" },
+      { question: "¿Dónde están los Cárpatos?", correct: "Europa Oriental", incorrect: "África" },
+      { question: "¿Dónde está el Cáucaso?", correct: "Entre Europa y Asia", incorrect: "Oceanía" },
+      { question: "¿Dónde están los Montes Apeninos?", correct: "Italia", incorrect: "Rusia" },
+      { question: "¿Dónde está el Mont Blanc?", correct: "Francia e Italia", incorrect: "España" },
+      { question: "¿Dónde está el Monte Elbrus?", correct: "Cáucaso", incorrect: "Pirineos" },
+      // Mesetas
+      { question: "¿Dónde está la Gran Llanura Europea?", correct: "Europa", incorrect: "Asia" },
+      // Islas Baleares
+      { question: "¿Dónde está Mallorca?", correct: "Mediterráneo", incorrect: "Pacífico" },
+      { question: "¿Dónde está Ibiza?", correct: "Mediterráneo", incorrect: "Atlántico" },
+      { question: "¿Dónde está Menorca?", correct: "Mediterráneo", incorrect: "Caribe" },
+      { question: "¿Dónde está Formentera?", correct: "Mediterráneo", incorrect: "Mar del Norte" },
+      // Islas Canarias
+      { question: "¿Dónde está La Palma?", correct: "Atlántico", incorrect: "Mediterráneo" },
+      { question: "¿Dónde está El Hierro?", correct: "Atlántico", incorrect: "Pacífico" },
+      { question: "¿Dónde está La Gomera?", correct: "Atlántico", incorrect: "Caribe" },
+      { question: "¿Dónde está Tenerife?", correct: "Atlántico", incorrect: "Mediterráneo" },
+      { question: "¿Dónde está Gran Canaria?", correct: "Atlántico", incorrect: "Mar Rojo" },
+      { question: "¿Dónde está Fuerteventura?", correct: "Atlántico", incorrect: "Mar del Norte" },
+      { question: "¿Dónde está Lanzarote?", correct: "Atlántico", incorrect: "Mar del Norte" },
+      // Cabos y Golfos
+      { question: "¿Dónde está el Golfo de Vizcaya?", correct: "Atlántico", incorrect: "Mediterráneo" },
+      { question: "¿Dónde está el Golfo de Cádiz?", correct: "Atlántico", incorrect: "Caribe" },
+      { question: "¿Dónde está el Delta del Ebro?", correct: "España", incorrect: "Italia" },
+      { question: "¿Dónde está el Cabo de Finisterre?", correct: "España", incorrect: "Portugal" },
+      { question: "¿Dónde está el Monte Teide?", correct: "Tenerife", incorrect: "Córcega" }
     ];
 
     let currentCardIndex = 0;
     let correctCount = 0;
     let incorrectCount = 0;
 
-    //
     // Función para iniciar el juego
     function startGame() {
       correctCount = 0;
