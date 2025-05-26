@@ -9,4 +9,5 @@ cascade:
 description: "Concentrador de Certificaciones"
 ---
 
-{{< iframe "/marco.html" >}}
+<iframe src="/marco.html" style="width: 100%; height: 80vh; border: none;" title="Contenido PMV Interactivo"></iframe>
+
