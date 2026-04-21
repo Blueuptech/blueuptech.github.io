@@ -1,15 +1,9 @@
-# Archivos del sistema
+# System files
 .DS_Store
+Thumbs.db
 
-# Archivos de bloqueo de Hugo
-.hugo_build.lock
-
-# Directorio generado por Hugo (si es manejado por GitHub Actions)
-public/
-
-# Recursos generados (si es manejado por GitHub Actions)
-resources/_gen/
-
-
+# Editor
 .vs/
-
+.vscode/
+*.swp
+*.swo

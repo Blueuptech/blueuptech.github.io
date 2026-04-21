@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BlueUP — Infraestructura de confianza para la era de la IA</title>
+  <meta name="description" content="BlueUP desarrolla plataformas de ciberseguridad, compliance AML, Zero Trust y orquestación multi-agente con IA. Soluciones enterprise para la era de la inteligencia artificial.">
+  <meta name="author" content="Arturo Navarro">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="BlueUP — Infraestructura de confianza para la era de la IA">
+  <meta property="og:description" content="Ciberseguridad, compliance y orquestación IA. Plataformas Zero Trust, AML y multi-agente.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://navarro-bores.com">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+              950: '#0c1a3d',
+            }
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-out forwards',
+            'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+            'fade-in-down': 'fadeInDown 0.6s ease-out forwards',
+            'slide-in-left': 'slideInLeft 0.8s ease-out forwards',
+            'slide-in-right': 'slideInRight 0.8s ease-out forwards',
+            'gradient-x': 'gradientX 6s ease infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeInDown: {
+              '0%': { opacity: '0', transform: 'translateY(-20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            slideInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            slideInRight: {
+              '0%': { opacity: '0', transform: 'translateX(30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            gradientX: {
+              '0%, 100%': { backgroundPosition: '0% 50%' },
+              '50%': { backgroundPosition: '100% 50%' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-10px)' },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ── Base ──────────────────────────────────────────── */
+    body {
+      background-color: #030712;
+      color: #e5e7eb;
+      font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    }
+
+    /* ── Scroll animations ────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.15s; }
+    .reveal-delay-2 { transition-delay: 0.3s; }
+    .reveal-delay-3 { transition-delay: 0.45s; }
+
+    /* ── Glassmorphism cards ──────────────────────────── */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(37, 99, 235, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 25px 60px -12px rgba(37, 99, 235, 0.15);
+    }
+
+    /* ── Gradient text ────────────────────────────────── */
+    .text-gradient {
+      background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 50%, #2563eb 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientX 6s ease infinite;
+    }
+
+    /* ── Glowing border ───────────────────────────────── */
+    .glow-border {
+      position: relative;
+    }
+    .glow-border::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      border-radius: inherit;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.4), rgba(124, 58, 237, 0.4), rgba(37, 99, 235, 0.1));
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .glow-border:hover::before {
+      opacity: 1;
+    }
+
+    /* ── Hero background mesh ─────────────────────────── */
+    .hero-bg {
+      background-image:
+        radial-gradient(at 20% 20%, rgba(37, 99, 235, 0.12) 0px, transparent 60%),
+        radial-gradient(at 80% 10%, rgba(124, 58, 237, 0.08) 0px, transparent 50%),
+        radial-gradient(at 50% 80%, rgba(37, 99, 235, 0.06) 0px, transparent 60%);
+    }
+
+    /* ── Grid pattern overlay ─────────────────────────── */
+    .grid-pattern {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    /* ── Tech badge ───────────────────────────────────── */
+    .tech-badge {
+      background: rgba(37, 99, 235, 0.1);
+      border: 1px solid rgba(37, 99, 235, 0.2);
+      color: #93c5fd;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.25rem 0.625rem;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+    }
+    .tech-badge:hover {
+      background: rgba(37, 99, 235, 0.2);
+      border-color: rgba(37, 99, 235, 0.4);
+    }
+
+    /* ── Architecture card ────────────────────────────── */
+    .arch-step {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .arch-step::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #2563eb, #7c3aed);
+      border-radius: 9999px;
+    }
+
+    /* ── Navbar blur ──────────────────────────────────── */
+    .nav-blur {
+      background: rgba(3, 7, 18, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* ── Mobile menu ──────────────────────────────────── */
+    .mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .mobile-menu.open {
+      max-height: 300px;
+    }
+
+    /* ── Separator ────────────────────────────────────── */
+    .section-sep {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(37, 99, 235, 0.2), transparent);
+    }
+
+    /* ── Smooth scroll offset for fixed nav ───────────── */
+    :target {
+      scroll-margin-top: 5rem;
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- ════════════════════════════════════════════════════
+       NAVIGATION
+       ════════════════════════════════════════════════════ -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-blur animate-fade-in-down">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2.5 group" id="nav-logo">
+          <svg class="w-8 h-8 transition-transform duration-300 group-hover:scale-110" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#2563eb"/>
+                <stop offset="100%" stop-color="#7c3aed"/>
+              </linearGradient>
+            </defs>
+            <rect width="32" height="32" rx="6" fill="url(#logo-grad)"/>
+            <text x="16" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="white">B</text>
+          </svg>
+          <span class="text-lg font-bold text-white tracking-tight">Blue<span class="text-brand-400">UP</span></span>
+        </a>
+
+        <!-- Desktop links -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#productos" class="text-sm text-gray-400 hover:text-white transition-colors duration-200" id="nav-products">Productos</a>
+          <a href="#arquitectura" class="text-sm text-gray-400 hover:text-white transition-colors duration-200" id="nav-architecture">Arquitectura</a>
+          <a href="#tech" class="text-sm text-gray-400 hover:text-white transition-colors duration-200" id="nav-tech">Tech Stack</a>
+          <a href="#contacto" class="text-sm text-gray-400 hover:text-white transition-colors duration-200" id="nav-contact">Contacto</a>
+          <a href="https://arnavarr.github.io/wiki/" target="_blank" class="inline-flex items-center gap-1.5 text-sm font-medium text-brand-400 hover:text-brand-300 transition-colors duration-200" id="nav-docs">
+            Documentación
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </a>
+        </div>
+
+        <!-- Mobile hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-400 hover:text-white p-2 transition-colors" aria-label="Abrir menú">
+          <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <div id="mobile-menu" class="mobile-menu md:hidden">
+        <div class="flex flex-col gap-1 pb-4 pt-2">
+          <a href="#productos" class="text-sm text-gray-400 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-all">Productos</a>
+          <a href="#arquitectura" class="text-sm text-gray-400 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-all">Arquitectura</a>
+          <a href="#tech" class="text-sm text-gray-400 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-all">Tech Stack</a>
+          <a href="#contacto" class="text-sm text-gray-400 hover:text-white py-2 px-3 rounded-lg hover:bg-white/5 transition-all">Contacto</a>
+          <a href="https://arnavarr.github.io/wiki/" target="_blank" class="text-sm text-brand-400 py-2 px-3 rounded-lg hover:bg-white/5 transition-all">Documentación ↗</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════════════════
+       HERO
+       ════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex items-center hero-bg grid-pattern overflow-hidden">
+    <!-- Decorative orbs -->
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/10 rounded-full blur-3xl animate-pulse-slow pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-72 h-72 bg-purple-600/10 rounded-full blur-3xl animate-pulse-slow pointer-events-none" style="animation-delay: 2s;"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 md:py-40">
+      <div class="max-w-4xl">
+        <!-- Eyebrow -->
+        <div class="animate-fade-in flex items-center gap-2 mb-6">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-600/10 border border-brand-600/20 text-brand-400 text-xs font-medium tracking-wide">
+            <span class="w-1.5 h-1.5 bg-brand-400 rounded-full animate-pulse"></span>
+            Plataformas Activas
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h1 class="animate-fade-in text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[0.9] mb-6">
+          <span class="text-gradient">BlueUP</span>
+        </h1>
+        <p class="animate-fade-in text-2xl sm:text-3xl md:text-4xl font-light text-gray-300 leading-tight mb-4" style="animation-delay: 0.2s;">
+          Infraestructura de confianza<br>
+          <span class="text-white font-medium">para la era de la IA</span>
+        </p>
+
+        <!-- Subtitle -->
+        <p class="animate-fade-in text-base sm:text-lg text-gray-500 max-w-2xl mb-10 leading-relaxed" style="animation-delay: 0.4s;">
+          Diseñamos y construimos plataformas de ciberseguridad, compliance regulatorio y orquestación de agentes inteligentes. Zero Trust nativo. Soberanía del dato. Gobernanza IA.
+        </p>
+
+        <!-- CTAs -->
+        <div class="animate-fade-in flex flex-col sm:flex-row gap-4" style="animation-delay: 0.6s;">
+          <a href="#productos" id="cta-products" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-brand-600/25 hover:-translate-y-0.5">
+            Explorar productos
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"/></svg>
+          </a>
+          <a href="https://arnavarr.github.io/wiki/" target="_blank" id="cta-docs" class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-gray-300 hover:text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5">
+            Ver documentación
+            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"/></svg>
+          </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="animate-fade-in mt-16 flex flex-wrap gap-x-10 gap-y-4" style="animation-delay: 0.8s;">
+          <div>
+            <p class="text-2xl font-bold text-white">3</p>
+            <p class="text-xs text-gray-500 uppercase tracking-wider">Plataformas</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white">Zero Trust</p>
+            <p class="text-xs text-gray-500 uppercase tracking-wider">Arquitectura</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white">DORA</p>
+            <p class="text-xs text-gray-500 uppercase tracking-wider">Compliance</p>
+          </div>
+          <div>
+            <p class="text-2xl font-bold text-white">Multi-Agent</p>
+            <p class="text-xs text-gray-500 uppercase tracking-wider">AI Orchestration</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+      <svg class="w-5 h-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"/>
+      </svg>
+    </div>
+  </section>
+
+
+  <div class="section-sep"></div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       PRODUCTS
+       ════════════════════════════════════════════════════ -->
+  <section id="productos" class="relative py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section header -->
+      <div class="reveal max-w-2xl mb-16">
+        <span class="text-brand-400 text-sm font-semibold tracking-widest uppercase">Ecosistema</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+          Tres plataformas,<br>un objetivo
+        </h2>
+        <p class="mt-4 text-gray-500 text-lg leading-relaxed">
+          Desde la detección de blanqueo de capitales hasta la orquestación de agentes IA, cada plataforma está diseñada con seguridad zero-trust como premisa fundamental.
+        </p>
+      </div>
+
+      <!-- Product cards grid -->
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- ── BC — AML Platform ─────────────────────── -->
+        <article class="reveal reveal-delay-1 glass-card glow-border rounded-2xl p-8 flex flex-col" id="product-bc">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-brand-600/10 border border-brand-600/20 flex items-center justify-center text-2xl">
+              🛡️
+            </div>
+            <span class="text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-2.5 py-1 rounded-full">Activo</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">BC</h3>
+          <p class="text-sm text-brand-400 font-medium mb-4">Anti-Money Laundering Platform</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+            Plataforma de detección y análisis de blanqueo de capitales con autorización híbrida asíncrona, 
+            zero-trust networking y gobernanza centralizada. Compliance DORA y SEPBLAC.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-badge">React</span>
+              <span class="tech-badge">Rust</span>
+              <span class="tech-badge">NATS</span>
+              <span class="tech-badge">Trino</span>
+              <span class="tech-badge">OPA</span>
+            </div>
+            <a href="https://arnavarr.github.io/wiki/bc/" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-brand-400 hover:text-brand-300 font-medium transition-colors group">
+              Ver documentación
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── IDColab — Zero Trust ──────────────────── -->
+        <article class="reveal reveal-delay-2 glass-card glow-border rounded-2xl p-8 flex flex-col" id="product-idcolab">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-purple-600/10 border border-purple-600/20 flex items-center justify-center text-2xl">
+              🔐
+            </div>
+            <span class="text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-2.5 py-1 rounded-full">Activo</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">IDColab</h3>
+          <p class="text-sm text-purple-400 font-medium mb-4">Zero Trust Stack</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+            Colaboración segura sin VPN, agentes ni plugins. Expone aplicaciones internas y legacy 
+            a usuarios externos con cifrado mTLS de extremo a extremo y autenticación OIDC.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-badge">Angular</span>
+              <span class="tech-badge">Quarkus</span>
+              <span class="tech-badge">OpenZiti</span>
+              <span class="tech-badge">Zrok</span>
+              <span class="tech-badge">Keycloak</span>
+            </div>
+            <a href="https://arnavarr.github.io/wiki/idcolab/" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-brand-400 hover:text-brand-300 font-medium transition-colors group">
+              Ver documentación
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- ── Nexus — Orchestrator ──────────────────── -->
+        <article class="reveal reveal-delay-3 glass-card glow-border rounded-2xl p-8 flex flex-col" id="product-nexus">
+          <div class="flex items-start justify-between mb-6">
+            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-2xl">
+              ⚡
+            </div>
+            <span class="text-xs font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 px-2.5 py-1 rounded-full">Activo</span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-1">Nexus</h3>
+          <p class="text-sm text-amber-400 font-medium mb-4">Orchestrator Framework</p>
+          <p class="text-gray-400 text-sm leading-relaxed mb-6 flex-1">
+            Framework de orquestación multi-agente sobre Gemini CLI. Servidores MCP, skills ADK, 
+            gobernanza de costes sobre Vertex AI y automatización de flujos de desarrollo con IA.
+          </p>
+          <div class="space-y-4">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">MCP SDK</span>
+              <span class="tech-badge">ADK</span>
+              <span class="tech-badge">Vertex AI</span>
+              <span class="tech-badge">Go</span>
+            </div>
+            <a href="https://arnavarr.github.io/wiki/nexus/" target="_blank" class="inline-flex items-center gap-1.5 text-sm text-brand-400 hover:text-brand-300 font-medium transition-colors group">
+              Ver documentación
+              <svg class="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section-sep"></div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       IDColab VIDEO SHOWCASE
+       ════════════════════════════════════════════════════ -->
+  <section id="demo" class="relative py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Text -->
+        <div class="reveal">
+          <span class="text-purple-400 text-sm font-semibold tracking-widest uppercase">Caso de Uso</span>
+          <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white leading-tight">
+            Zero Trust en acción
+          </h2>
+          <p class="mt-4 text-gray-400 leading-relaxed">
+            IDColab permite que talleres mecánicos compartan información de reparaciones, inventario y facturación 
+            con colaboradores externos (peritos, aseguradoras, proveedores) de forma segura y sin exponer sus sistemas 
+            internos a internet.
+          </p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex items-start gap-3 text-sm text-gray-400">
+              <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Sin VPN, agentes ni plugins en el navegador
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-400">
+              <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Cifrado mTLS extremo a extremo con OpenZiti
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-400">
+              <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Apps legacy sin modificar — se exponen tal cual
+            </li>
+            <li class="flex items-start gap-3 text-sm text-gray-400">
+              <svg class="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Identidad centralizada con Keycloak OIDC/PKCE
+            </li>
+          </ul>
+        </div>
+        <!-- Video -->
+        <div class="reveal reveal-delay-1">
+          <div class="relative rounded-2xl overflow-hidden border border-white/5 shadow-2xl shadow-purple-600/5">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0;">
+              <iframe
+                src="https://www.youtube.com/embed/Rl31rsWZDpw"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                title="Presentación plataforma IDColab"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section-sep"></div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       ARCHITECTURE
+       ════════════════════════════════════════════════════ -->
+  <section id="arquitectura" class="relative py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section header -->
+      <div class="reveal max-w-2xl mb-16">
+        <span class="text-brand-400 text-sm font-semibold tracking-widest uppercase">Arquitectura</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+          Autorización Asíncrona Híbrida
+        </h2>
+        <p class="mt-4 text-gray-500 text-lg leading-relaxed">
+          Un modelo que desacopla el plano de gobernanza del plano de ejecución, combinando control centralizado 
+          con ultra-baja latencia en el edge.
+        </p>
+      </div>
+
+      <!-- Architecture comparison -->
+      <div class="grid md:grid-cols-3 gap-6 mb-16">
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6 text-center opacity-60">
+          <div class="text-3xl mb-3">🏛️</div>
+          <h4 class="text-white font-semibold mb-2">Centralizado</h4>
+          <p class="text-gray-500 text-sm">Control absoluto pero rígido. Alta latencia por llamada al centro en cada acción.</p>
+        </div>
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-6 text-center border-brand-600/30">
+          <div class="text-3xl mb-3">⚡</div>
+          <h4 class="text-gradient font-bold mb-2 text-lg">Híbrido</h4>
+          <p class="text-gray-400 text-sm">Gobernanza central con ejecución local. Ultra-baja latencia y resiliencia offline.</p>
+          <div class="mt-3 px-3 py-1 rounded-full bg-brand-600/10 border border-brand-600/20 text-brand-400 text-xs font-medium inline-block">
+            Nuestro enfoque
+          </div>
+        </div>
+        <div class="reveal reveal-delay-3 glass-card rounded-2xl p-6 text-center opacity-60">
+          <div class="text-3xl mb-3">🌐</div>
+          <h4 class="text-white font-semibold mb-2">Descentralizado</h4>
+          <p class="text-gray-500 text-sm">Autonomía total pero difícil de auditar centralmente. Post-hoc compliance.</p>
+        </div>
+      </div>
+
+      <!-- Flow steps -->
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div class="reveal space-y-8">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="w-8 h-8 rounded-lg bg-brand-600/20 text-brand-400 flex items-center justify-center text-sm font-bold">1</span>
+            Fase de Decisión
+          </h3>
+          <div class="arch-step space-y-4">
+            <div>
+              <h4 class="text-white font-medium text-sm">Identidad Híbrida</h4>
+              <p class="text-gray-500 text-sm">Keycloak (humanos) + SPIRE SVIDs (workloads). Sin API keys estáticas.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-sm">Motor de Políticas OPA</h4>
+              <p class="text-gray-500 text-sm">Evaluación centralizada en tiempo real en cada punto de control crítico.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-sm">LLM Soberano</h4>
+              <p class="text-gray-500 text-sm">vLLM / Ollama — el procesamiento nunca sale de la infraestructura controlada.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-1 space-y-8">
+          <h3 class="text-xl font-bold text-white flex items-center gap-2">
+            <span class="w-8 h-8 rounded-lg bg-purple-600/20 text-purple-400 flex items-center justify-center text-sm font-bold">2</span>
+            Fase de Ejecución
+          </h3>
+          <div class="arch-step space-y-4" style="--tw-gradient-from: #7c3aed; --tw-gradient-to: #2563eb;">
+            <div>
+              <h4 class="text-white font-medium text-sm">Biscuit Tokens</h4>
+              <p class="text-gray-500 text-sm">Tokens de capacidad con prueba criptográfica de la autorización maestra.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-sm">Atenuación Asíncrona</h4>
+              <p class="text-gray-500 text-sm">Los agentes restringen privilegios localmente pero nunca los amplían.</p>
+            </div>
+            <div>
+              <h4 class="text-white font-medium text-sm">Verificación Edge</h4>
+              <p class="text-gray-500 text-sm">Clave pública local — latencia cero y operatividad offline total.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section-sep"></div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       TECH STACK
+       ════════════════════════════════════════════════════ -->
+  <section id="tech" class="relative py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section header -->
+      <div class="reveal max-w-2xl mb-16">
+        <span class="text-brand-400 text-sm font-semibold tracking-widest uppercase">Tecnologías</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight">
+          Stack tecnológico
+        </h2>
+        <p class="mt-4 text-gray-500 text-lg leading-relaxed">
+          Seleccionamos cada tecnología por su rendimiento, seguridad y alineación con arquitecturas zero-trust y edge computing.
+        </p>
+      </div>
+
+      <!-- Tech categories -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Frontend -->
+        <div class="reveal reveal-delay-1 glass-card rounded-2xl p-6">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-sky-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"/></svg>
+            </div>
+            <h3 class="text-white font-semibold">Frontend</h3>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-sky-400 rounded-full"></span>React</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-sky-400 rounded-full"></span>Angular</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-sky-400 rounded-full"></span>TypeScript</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-sky-400 rounded-full"></span>CSS Modules</li>
+          </ul>
+        </div>
+
+        <!-- Backend -->
+        <div class="reveal reveal-delay-2 glass-card rounded-2xl p-6">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 01-3-3m3 3a3 3 0 100 6h13.5a3 3 0 100-6m-16.5-3a3 3 0 013-3h13.5a3 3 0 013 3m-19.5 0a4.5 4.5 0 01.9-2.7L5.737 5.1a3.375 3.375 0 012.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 01.9 2.7m0 0a3 3 0 01-3 3m0 3h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008zm-3 6h.008v.008h-.008v-.008zm0-6h.008v.008h-.008v-.008z"/></svg>
+            </div>
+            <h3 class="text-white font-semibold">Backend</h3>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-emerald-400 rounded-full"></span>Rust (Axum)</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-emerald-400 rounded-full"></span>Python (FastAPI)</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-emerald-400 rounded-full"></span>Quarkus + Camel</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-emerald-400 rounded-full"></span>NATS</li>
+          </ul>
+        </div>
+
+        <!-- Security -->
+        <div class="reveal reveal-delay-3 glass-card rounded-2xl p-6">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-rose-500/10 border border-rose-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-rose-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
+            </div>
+            <h3 class="text-white font-semibold">Seguridad</h3>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-rose-400 rounded-full"></span>OpenZiti</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-rose-400 rounded-full"></span>Keycloak</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-rose-400 rounded-full"></span>SPIRE</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-rose-400 rounded-full"></span>OPA</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-rose-400 rounded-full"></span>Biscuit Tokens</li>
+          </ul>
+        </div>
+
+        <!-- Data & AI -->
+        <div class="reveal glass-card rounded-2xl p-6">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-violet-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+            </div>
+            <h3 class="text-white font-semibold">Data & IA</h3>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-violet-400 rounded-full"></span>Vertex AI</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-violet-400 rounded-full"></span>MCP SDK</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-violet-400 rounded-full"></span>Trino</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-violet-400 rounded-full"></span>Qdrant</li>
+            <li class="text-sm text-gray-400 flex items-center gap-2"><span class="w-1 h-1 bg-violet-400 rounded-full"></span>PostgreSQL</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Infra row -->
+      <div class="reveal mt-8 glass-card rounded-2xl p-6">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="w-10 h-10 rounded-lg bg-brand-600/10 border border-brand-600/20 flex items-center justify-center">
+            <svg class="w-5 h-5 text-brand-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 004.5 4.5H18a3.75 3.75 0 001.332-7.257 3 3 0 00-3.758-3.848 5.25 5.25 0 00-10.233 2.33A4.502 4.502 0 002.25 15z"/></svg>
+          </div>
+          <h3 class="text-white font-semibold">Infraestructura & DevOps</h3>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="tech-badge">Google Cloud</span>
+          <span class="tech-badge">Cloud Run</span>
+          <span class="tech-badge">Compute Engine</span>
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">Terraform</span>
+          <span class="tech-badge">GitHub Actions</span>
+          <span class="tech-badge">Cilium</span>
+          <span class="tech-badge">gVisor</span>
+          <span class="tech-badge">nginx</span>
+          <span class="tech-badge">Let's Encrypt</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section-sep"></div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       PILLARS / VALUES
+       ════════════════════════════════════════════════════ -->
+  <section id="pilares" class="relative py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal max-w-2xl mb-16 mx-auto text-center">
+        <span class="text-brand-400 text-sm font-semibold tracking-widest uppercase">Principios</span>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">Tres pilares de diseño</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="reveal reveal-delay-1 text-center">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-brand-600/10 border border-brand-600/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-brand-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z"/></svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Identidad como Perímetro</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">La seguridad no depende de la ubicación del servidor, sino de la identidad criptográfica del humano y la máquina.</p>
+        </div>
+        <div class="reveal reveal-delay-2 text-center">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-purple-600/10 border border-purple-600/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-purple-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"/></svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Privilegios Dinámicos</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">La IA propone, pero las políticas OPA y la intervención humana actúan como frenos inteligentes de seguridad.</p>
+        </div>
+        <div class="reveal reveal-delay-3 text-center">
+          <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center">
+            <svg class="w-7 h-7 text-amber-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m0-10.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.75c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.57-.598-3.75h-.152c-3.196 0-6.1-1.249-8.25-3.286zm0 13.036h.008v.008H12v-.008z"/></svg>
+          </div>
+          <h3 class="text-white font-bold text-lg mb-2">Blast Radius Mínimo</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">Aislamiento con Cilium y sandboxes gVisor: un compromiso en un agente nunca se traduce en una brecha sistémica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section-sep"></div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       CONTACT / CTA
+       ════════════════════════════════════════════════════ -->
+  <section id="contacto" class="relative py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="reveal glass-card rounded-3xl p-10 md:p-16 text-center relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-600/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative">
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
+            ¿Hablamos?
+          </h2>
+          <p class="text-gray-400 text-lg max-w-xl mx-auto mb-10">
+            Si tu organización necesita infraestructura Zero Trust, compliance AML o 
+            explorar orquestación multi-agente con IA, estamos listos.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="https://www.linkedin.com/in/arturonavarro/" target="_blank" id="cta-linkedin" class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-brand-600/25 hover:-translate-y-0.5">
+              <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/arnavarr" target="_blank" id="cta-github" class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-gray-300 hover:text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5">
+              <svg class="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://arnavarr.github.io/wiki/" target="_blank" id="cta-wiki" class="inline-flex items-center gap-2.5 px-7 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 text-gray-300 hover:text-white text-sm font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5">
+              <svg class="w-4.5 h-4.5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+              Wiki Docs
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════ -->
+  <footer class="border-t border-white/5 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <svg class="w-6 h-6" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="footer-grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#2563eb"/><stop offset="100%" stop-color="#7c3aed"/></linearGradient></defs>
+            <rect width="32" height="32" rx="6" fill="url(#footer-grad)"/>
+            <text x="16" y="22" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="18" fill="white">B</text>
+          </svg>
+          <span class="text-sm text-gray-500">© 2026 BlueUP. Todos los derechos reservados.</span>
+        </div>
+        <div class="flex items-center gap-6">
+          <a href="https://github.com/arnavarr" target="_blank" class="text-gray-500 hover:text-gray-300 transition-colors" aria-label="GitHub">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/arturonavarro/" target="_blank" class="text-gray-500 hover:text-gray-300 transition-colors" aria-label="LinkedIn">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="https://arnavarr.github.io/wiki/" target="_blank" class="text-gray-500 hover:text-gray-300 transition-colors text-sm">Docs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SCRIPTS
+       ════════════════════════════════════════════════════ -->
+  <script>
+    // ── Scroll reveal ──────────────────────────────────
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // ── Mobile menu toggle ─────────────────────────────
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    // Close menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+
+    // ── Navbar background on scroll ────────────────────
+    const navbar = document.getElementById('navbar');
+    let lastScroll = 0;
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 20) {
+        navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.08)';
+      } else {
+        navbar.style.borderBottomColor = 'rgba(255, 255, 255, 0.05)';
+      }
+      lastScroll = currentScroll;
+    }, { passive: true });
+  </script>
+
+</body>
+</html>
