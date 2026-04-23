@@ -1,22 +1,25 @@
 ---
 name: BlueUP Portal
 colors:
-  # ── Surface system ──────────────────────────────────
-  surface: "#030712"
-  surface-dim: "#030712"
-  surface-bright: "#1f2937"
-  surface-container-lowest: "#000000"
-  surface-container-low: "#0f172a"
-  surface-container: "#111827"
-  surface-container-high: "#1f2937"
-  surface-container-highest: "#374151"
-  on-surface: "#e5e7eb"
-  on-surface-variant: "#9ca3af"
-  inverse-surface: "#f9fafb"
-  inverse-on-surface: "#030712"
-  outline: "#4b5563"
-  outline-variant: "#374151"
-  surface-tint: "#3b82f6"
+  # ── Surface system (Dark) ───────────────────────────
+  surface-dark: "#030712"
+  surface-dim-dark: "#030712"
+  surface-bright-dark: "#1f2937"
+  surface-container-dark: "#111827"
+  on-surface-dark: "#e5e7eb"
+  on-surface-variant-dark: "#9ca3af"
+  outline-dark: "#4b5563"
+  
+  # ── Surface system (Light) ──────────────────────────
+  surface-light: "#f9fafb"
+  surface-dim-light: "#f3f4f6"
+  surface-bright-light: "#ffffff"
+  surface-container-light: "#e5e7eb"
+  on-surface-light: "#111827"
+  on-surface-variant-light: "#4b5563"
+  outline-light: "#d1d5db"
+  
+  # ── Brand blue palette ─────────────────────────────
 
   # ── Brand blue palette ─────────────────────────────
   primary: "#3b82f6"
@@ -59,12 +62,17 @@ colors:
   error-container: "rgba(248, 113, 113, 0.1)"
 
   # ── Background & overlays ──────────────────────────
-  background: "#030712"
-  on-background: "#e5e7eb"
+  background-dark: "#030712"
+  on-background-dark: "#e5e7eb"
+  background-light: "#f9fafb"
+  on-background-light: "#111827"
   scrim: "rgba(3, 7, 18, 0.75)"
-  glass-surface: "rgba(255, 255, 255, 0.03)"
-  glass-surface-hover: "rgba(255, 255, 255, 0.06)"
-  glass-border: "rgba(255, 255, 255, 0.06)"
+  glass-surface-dark: "rgba(255, 255, 255, 0.03)"
+  glass-surface-hover-dark: "rgba(255, 255, 255, 0.06)"
+  glass-border-dark: "rgba(255, 255, 255, 0.06)"
+  glass-surface-light: "rgba(255, 255, 255, 0.6)"
+  glass-surface-hover-light: "rgba(255, 255, 255, 0.8)"
+  glass-border-light: "rgba(0, 0, 0, 0.05)"
   glass-border-hover: "rgba(37, 99, 235, 0.3)"
 
   # ── Gradient endpoints ─────────────────────────────
@@ -338,22 +346,21 @@ components:
 
 ## Brand & Style
 
-BlueUP is a cybersecurity-forward corporate portal that communicates **trust, technical depth, and modern sophistication**. The visual language draws from the intersection of enterprise authority and bleeding-edge technology — the interface must feel like walking into a secure operations center, not a SaaS marketing page.
+BlueUP is a cybersecurity-forward corporate portal that communicates **trust, technical depth, and modern sophistication**. The visual language draws from the intersection of enterprise authority and bleeding-edge technology.
 
-The design system follows a **Dark Glassmorphism** aesthetic: an inky, near-black canvas punctuated by controlled bursts of blue and violet light. Every surface is semi-transparent and frosted, creating a physical sense of layered depth — as though the user is peering through hardened glass panels into the infrastructure beneath. The emotional register is **calm confidence**: the interface should feel quiet, precise, and deliberately restrained.
+The design system supports both **Dark Glassmorphism** and **Light Glassmorphism** aesthetics. In dark mode, it uses an inky, near-black canvas punctuated by controlled bursts of blue and violet light. In light mode, it shifts to an airy, pristine light-gray canvas where depth is created through subtle shadows and layered frosted glass. In both modes, every surface is semi-transparent, creating a layered feel — as though the user is peering through hardened glass panels into the infrastructure beneath.
 
 The brand mark is a gradient-filled rounded rectangle (blue → violet, 135°) bearing a bold white "B" in Inter 700. This diagonal gradient — `#2563eb` to `#7c3aed` — is the DNA of the entire visual identity and recurs in text highlights, decorative orbs, border glows, and architectural diagrams.
 
 ## Colors
 
-The palette is built around a **single chromatic axis** — electric blue to deep violet — applied against a near-black canvas.
+The palette is built around a **single chromatic axis** — electric blue to deep violet — applied against either a near-black canvas or a pristine light-gray canvas.
 
-- **Canvas:** The body sits at `#030712` (gray-950), a blue-tinted near-black. This is never pure `#000000`; the faint blue undertone ensures the dark surface feels "alive" rather than void-like.
-- **Surfaces:** Glass components use white at 3–6% opacity (`rgba(255,255,255, 0.03)` resting, `0.06` on hover). Borders follow the same strategy at 6% resting, escalating to a blue-tinted `rgba(37,99,235, 0.3)` on interaction.
-- **Brand gradient:** The hero text and logo use a 135° gradient from Blue-600 (`#2563eb`) through Violet (`#7c3aed`) back to Blue-600. This gradient slowly animates its position over a 6-second cycle, creating a breathing, alive quality.
-- **Accent differentiation:** Each product vertical has a signature hue — Blue-600 for BC, Purple-600 for IDColab, and Amber-500 for Nexus — used only on icons and subtitle text, never on large surfaces.
-- **Status colors:** Active badges use Emerald-400 (`#34d399`) at 10% opacity fill with 20% border, keeping them present but not dominant.
-- **Text hierarchy:** Primary text is white (`#ffffff`), body copy is Gray-300 (`#d1d5db`), secondary copy is Gray-400 (`#9ca3af`), and muted metadata uses Gray-500 (`#6b7280`). This four-tier grayscale provides hierarchy without introducing new hues.
+- **Canvas:** In dark mode, the body sits at `#030712` (gray-950). In light mode, it uses `#f9fafb` (gray-50).
+- **Surfaces:** Dark mode glass components use white at 3–6% opacity (`rgba(255,255,255, 0.03)`). Light mode glass uses white at 60–80% opacity (`rgba(255,255,255, 0.6)`) to ensure contrast against the light background.
+- **Brand gradient:** The hero text and logo use a 135° gradient from Blue-600 (`#2563eb`) through Violet (`#7c3aed`) back to Blue-600.
+- **Accent differentiation:** Each product vertical has a signature hue — Blue-600 for BC, Purple-600 for IDColab, and Amber-500 for Nexus.
+- **Text hierarchy:** Primary text is white in dark mode and gray-900 in light mode. Muted text uses gray-400 (dark) or gray-500 (light).
 
 ## Typography
 
