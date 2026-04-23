@@ -7,3 +7,11 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Node
+node_modules/
+package-lock.json
+
+# VitePress
+.vitepress/cache/
+.vitepress/dist/

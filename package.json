@@ -1,0 +1,14 @@
+{
+  "name": "blueup-portal",
+  "version": "1.0.0",
+  "description": "BlueUP — Infraestructura de confianza para la era de la IA",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3"
+  }
+}

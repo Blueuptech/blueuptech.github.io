@@ -1,0 +1,201 @@
+/**
+ * BlueUP Custom Theme — Dark & Light Glassmorphism
+ * Extends VitePress default theme with BlueUP design tokens.
+ */
+
+/* ── Typography ───────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --vp-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* ── Brand Colors ─────────────────────────────────── */
+:root {
+  --vp-c-brand-1: #3b82f6;
+  --vp-c-brand-2: #2563eb;
+  --vp-c-brand-3: #1d4ed8;
+  --vp-c-brand-soft: rgba(37, 99, 235, 0.14);
+
+  /* Button styling */
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: #ffffff;
+  --vp-button-brand-bg: #2563eb;
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: #ffffff;
+  --vp-button-brand-hover-bg: #3b82f6;
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: #ffffff;
+  --vp-button-brand-active-bg: #1d4ed8;
+
+  /* Home hero gradient */
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 50%, #2563eb 100%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(37, 99, 235, 0.2) 0%, rgba(124, 58, 237, 0.2) 100%);
+  --vp-home-hero-image-filter: blur(44px);
+}
+
+/* ── Light Mode ───────────────────────────────────── */
+:root {
+  --vp-c-bg: #f9fafb;
+  --vp-c-bg-alt: #f3f4f6;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-bg-soft: rgba(255, 255, 255, 0.6);
+
+  --vp-c-text-1: #111827;
+  --vp-c-text-2: #374151;
+  --vp-c-text-3: #6b7280;
+
+  --vp-c-divider: rgba(0, 0, 0, 0.08);
+  --vp-c-gutter: rgba(0, 0, 0, 0.04);
+
+  --vp-nav-bg-color: rgba(255, 255, 255, 0.85);
+
+  --vp-sidebar-bg-color: var(--vp-c-bg);
+}
+
+/* ── Dark Mode ────────────────────────────────────── */
+.dark {
+  --vp-c-bg: #030712;
+  --vp-c-bg-alt: #0f172a;
+  --vp-c-bg-elv: #111827;
+  --vp-c-bg-soft: rgba(255, 255, 255, 0.03);
+
+  --vp-c-text-1: #e5e7eb;
+  --vp-c-text-2: #9ca3af;
+  --vp-c-text-3: #6b7280;
+
+  --vp-c-divider: rgba(255, 255, 255, 0.06);
+  --vp-c-gutter: rgba(255, 255, 255, 0.03);
+
+  --vp-nav-bg-color: rgba(3, 7, 18, 0.75);
+
+  --vp-sidebar-bg-color: var(--vp-c-bg);
+}
+
+/* ── Glassmorphism Overrides ──────────────────────── */
+.VPNav {
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+.dark .VPNav {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Glassmorphism for content cards and features */
+.VPFeature {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.VPFeature:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(37, 99, 235, 0.3) !important;
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px -12px rgba(37, 99, 235, 0.15) !important;
+}
+
+.dark .VPFeature {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.dark .VPFeature:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(37, 99, 235, 0.3) !important;
+}
+
+/* ── Hero Section Enhancement ─────────────────────── */
+.VPHero .name {
+  font-weight: 900 !important;
+  letter-spacing: -0.025em !important;
+}
+
+.VPHero .text {
+  font-weight: 300 !important;
+}
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2) !important;
+}
+
+/* ── Custom Containers (info, tip, warning) ───────── */
+.dark .custom-block {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.custom-block.info {
+  background: rgba(37, 99, 235, 0.05);
+  border-color: rgba(37, 99, 235, 0.2);
+}
+
+.dark .custom-block.info {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.25);
+}
+
+.custom-block.tip {
+  background: rgba(52, 211, 153, 0.05);
+  border-color: rgba(52, 211, 153, 0.2);
+}
+
+.dark .custom-block.tip {
+  background: rgba(52, 211, 153, 0.1);
+  border-color: rgba(52, 211, 153, 0.25);
+}
+
+/* ── Code Blocks ──────────────────────────────────── */
+.dark div[class*='language-'] {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Sidebar Glassmorphism ────────────────────────── */
+.dark .VPSidebar {
+  background: rgba(3, 7, 18, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+/* ── Feature Link Styles ──────────────────────────── */
+.VPFeature .link-text {
+  color: var(--vp-c-brand-1) !important;
+}
+
+/* ── Smooth transitions for theme switching ───────── */
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ── Project badge used in docs ───────────────────── */
+.project-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  background: rgba(52, 211, 153, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+/* ── Table enhancements ───────────────────────────── */
+.dark table {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+.dark table th {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.dark table td {
+  border-color: rgba(255, 255, 255, 0.04);
+}
