@@ -50,6 +50,7 @@ export default defineConfig({
                 { text: 'Arquitectura', link: '/es/bc/architecture' },
                 { text: 'Product Guidelines', link: '/es/bc/guidelines' },
                 { text: 'Tech Stack', link: '/es/bc/tech-stack' },
+                { text: '📸 Capturas de Pantalla', link: '/es/bc/screenshots' },
               ],
             },
             {
@@ -178,6 +179,7 @@ export default defineConfig({
                 { text: 'Architecture', link: '/en/bc/architecture' },
                 { text: 'Product Guidelines', link: '/en/bc/guidelines' },
                 { text: 'Tech Stack', link: '/en/bc/tech-stack' },
+                { text: '📸 Screenshots', link: '/en/bc/screenshots' },
               ],
             },
             {

@@ -81,4 +81,19 @@ Plan de implementación por fases con estado actual y pendientes.
 → [Ver roadmap](/es/bc/development/roadmap)
 :::
 
+::: info 📸 Capturas de Pantalla
+Galería completa del frontend BlueUPALM con diseño Dark Glassmorphism.
+→ [Ver capturas](/es/bc/screenshots)
+:::
+
+</div>
+
+## Vista Previa
+
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem;">
+
+![Dashboard](/images/bc/dashboard.png)
+
+![Login](/images/bc/login.png)
+
 </div>
