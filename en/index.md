@@ -52,6 +52,30 @@ A model that decouples the governance plane from the execution plane, combining 
 
 ---
 
+## 🎬 BlueUPALM in Action
+
+BlueUPALM automates the complete regulatory compliance lifecycle — from transactional data ingestion to official supervisor communication — with Zero Trust architecture, AML engine and DORA incident management.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);">
+  <iframe
+    src="https://www.youtube.com/embed/6gDoRdg3wbE"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    title="BlueUPALM — AML/DORA Commercial Presentation"
+    loading="lazy"
+  ></iframe>
+</div>
+
+- ✅ 9 integrated modules — Dashboard, Clients, Alerts, Communications, DORA...
+- ✅ AML engine with fuzzy screening against EU, OFAC and UN lists
+- ✅ 10-state SEPBLAC legal workflow with automatic F19 form generation
+- ✅ DORA incident management with regulatory timers
+- → [View full presentation](/en/bc/demo) | [View documentation](/en/bc/)
+
+---
+
 ## 🎬 IDColab in Action
 
 IDColab enables automotive workshops to share repair information, inventory and billing with external collaborators (assessors, insurers, suppliers) securely and without exposing their internal systems to the internet.

@@ -9,6 +9,22 @@ description: Anti-money laundering detection and analysis platform
 
 Application for the analysis and detection of information potentially derived from money laundering. It implements a **Hybrid Asynchronous Authorization** architecture that combines centralized governance with decentralized execution at the edge.
 
+## 🎬 Video Demo
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);">
+  <iframe
+    src="https://www.youtube.com/embed/6gDoRdg3wbE"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    title="BlueUPALM — AML/DORA Commercial Presentation"
+    loading="lazy"
+  ></iframe>
+</div>
+
+→ [View full presentation with scene index](/en/bc/demo)
+
 ## Audience
 
 | Role | Description |
@@ -45,6 +61,11 @@ Enable autonomous agent operations in decentralized environments securely.
 ## Documentation
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+
+::: info 🎬 Commercial Demo
+7-minute video presentation covering all features.
+→ [View demo](/en/bc/demo)
+:::
 
 ::: info 📐 Architecture
 Hybrid Asynchronous Authorization Model, step-by-step Zero-Trust flow.

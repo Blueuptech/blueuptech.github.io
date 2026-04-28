@@ -9,6 +9,22 @@ description: Plataforma de análisis y detección de blanqueo de capitales
 
 Aplicación para el análisis y detección de información posiblemente derivada del blanqueo de capitales. Implementa una arquitectura de **Autorización Asíncrona Híbrida** que combina gobernanza centralizada con ejecución descentralizada en el edge.
 
+## 🎬 Demo en Vídeo
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 12px; margin: 1.5rem 0; box-shadow: 0 8px 32px rgba(37, 99, 235, 0.15);">
+  <iframe
+    src="https://www.youtube.com/embed/6gDoRdg3wbE"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 12px;"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    title="BlueUPALM — Presentación Comercial AML/DORA"
+    loading="lazy"
+  ></iframe>
+</div>
+
+→ [Ver presentación completa con índice de escenas](/es/bc/demo)
+
 ## Audiencia
 
 | Rol | Descripción |
@@ -45,6 +61,11 @@ Habilitar operaciones autónomas de agentes en entornos descentralizados de form
 ## Documentación
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+
+::: info 🎬 Demo Comercial
+Presentación en vídeo de 7 minutos con todas las features.
+→ [Ver demo](/es/bc/demo)
+:::
 
 ::: info 📐 Arquitectura
 Modelo de Autorización Asíncrona Híbrida, flujo Zero-Trust paso a paso.
@@ -97,3 +118,4 @@ Galería completa del frontend BlueUPALM con diseño Dark Glassmorphism.
 ![Login](/images/bc/login.png)
 
 </div>
+

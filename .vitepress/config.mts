@@ -47,6 +47,7 @@ export default defineConfig({
               text: 'BC — AML Platform',
               items: [
                 { text: 'Visión General', link: '/es/bc/' },
+                { text: '🎬 Demo Comercial', link: '/es/bc/demo' },
                 { text: 'Arquitectura', link: '/es/bc/architecture' },
                 { text: 'Product Guidelines', link: '/es/bc/guidelines' },
                 { text: 'Tech Stack', link: '/es/bc/tech-stack' },
@@ -176,6 +177,7 @@ export default defineConfig({
               text: 'BC — AML Platform',
               items: [
                 { text: 'Overview', link: '/en/bc/' },
+                { text: '🎬 Commercial Demo', link: '/en/bc/demo' },
                 { text: 'Architecture', link: '/en/bc/architecture' },
                 { text: 'Product Guidelines', link: '/en/bc/guidelines' },
                 { text: 'Tech Stack', link: '/en/bc/tech-stack' },
